@@ -1,16 +1,17 @@
 <div class="container">
 
-  <div class="col-md-8 offset-md-2">
-
-    <%= form_tag beauticians_path, method: :get, style: "display: flex;" do %>
-      <%= text_field_tag :query,
-        params[:query],
-        class: "form-control my-4",
-        placeholder: "Search Beauticians"
-      %>
-      <%= submit_tag "Search", class: "btn btn-primary my-4" %>
-    <% end %>
-        
+  <div>
+    <div class="col-md-8 offset-md-2">
+      <%= form_tag beauticians_path, method: :get, style: "display: flex;" do %>
+        <%= text_field_tag :query,
+          params[:query],
+          class: "form-control my-4",
+          placeholder: "Search by Beauticians, Treatments or Location"
+        %>
+        <%= submit_tag "Search", class: "btn btn-primary my-4" %>
+      <% end %>
+    </div>
+    
   </div>
 
   <div class="row">
