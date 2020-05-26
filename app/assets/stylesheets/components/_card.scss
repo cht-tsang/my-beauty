@@ -4,6 +4,11 @@
   grid-gap: 16px;
 }
 
+.card {
+  width: 350px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
 // Smallest device
 @media (min-width: 100px) and (max-width: 575px) {
   .cards {
