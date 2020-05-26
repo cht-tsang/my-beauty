@@ -19,5 +19,10 @@ class BeauticiansController < ApplicationController
       end
   end
 
+  private
+
+  def beautician_params
+    params.require(:beautician).permit(:name, :location, :description, :photos)
+  end
 
 end
