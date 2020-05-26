@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container" data-controller="search">
 
   <div>
     <div class="col-md-8 offset-md-2">
@@ -6,33 +6,19 @@
         <%= text_field_tag :query,
           params[:query],
           class: "form-control my-4",
-          placeholder: "Search by Beauticians, Treatments or Location"
+          placeholder: "Search by Beauticians, Treatments or Location", data: {action: "keyup->search#searchInput", target: "search.input"}
         %>
-        <%= submit_tag "Search", class: "btn btn-primary my-4" %>
+        
       <% end %>
     </div>
     
   </div>
 
   <div class="row">
-    <div class="cards">
-        <% @beauticians.each do |beautician| %>
-          
-          <div class="col-lg-4 col-md-6 col-sm-12 p-3">
-            <div class="card">
-              <img class="card-img-top img-fluid" src="//via.placeholder.com/350x150" alt="img">
-              <div class="card-body">
-                <h4 class="card-title"><%= beautician.name %></h4>
-                <p class="card-text"><%= beautician.description %></p>
-                
-              </div>
-              <div class="card-footer text-center bg-white">
-                <a class="btn btn-outline-secondary" href="#">View Profile</a>
-              </div>
-            </div>
-          </div>
-          
-        <% end %>
-      </div>
+    
+    <div id="search-results">
+      <%= render "card", beauticians: @beauticians %>
+    </div>
+    
   </div>
 </div>

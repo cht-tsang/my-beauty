@@ -2,8 +2,12 @@ class BeauticiansController < ApplicationController
   skip_before_action :authenticate_user!, only: :index
 
   def index
+    
     if params[:query].present?
       @beauticians = Beautician.global_search(params[:query])
+      respond_to do |format|
+        format.js
+      end
     else
       @beauticians = Beautician.all
     end

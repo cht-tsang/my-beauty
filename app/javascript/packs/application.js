@@ -24,11 +24,22 @@ require("channels")
 
 // External imports
 import "bootstrap";
-
+import { Application } from "stimulus"
+import { definitionsFromContext } from "stimulus/webpack-helpers"
+// import { search } from "../library/search";
 // Internal imports, e.g:
 // import { initSelect2 } from '../components/init_select2';
+
+const application = Application.start()
+const context = require.context("../controllers", true, /\.js$/)
+application.load(definitionsFromContext(context))
 
 document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:
   // initSelect2();
+  // search();
 });
+
+
+// import "controllers"
+
