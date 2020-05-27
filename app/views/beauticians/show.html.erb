@@ -13,7 +13,7 @@
       <h4>Treatments</h4>
         <% @beautician.treatments.each do |treatment| %>
           <ul>
-            <li> <b><%= treatment.name %></b>: <%= treatment.description %> - £<%= treatment.cost %> - <%= link_to "Book Now", beautician_booking_path(@beautician, treatment),method: :create, data: {confirm: "Confirm Booking?"}, class: "btn btn-my-beauty"%></li>
+            <li> <b><%= treatment.name %></b>: <%= treatment.description %> - £<%= treatment.cost %> - <%= link_to "Book Now",  new_treatment_booking_path(treatment), class: "btn btn-my-beauty"%></li>
           </ul>
         <% end %>
       </div>
