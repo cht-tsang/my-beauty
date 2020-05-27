@@ -3,6 +3,9 @@
   <h2>Please confirm details</h2>
   <P>status = <%= @booking.status %></p>
   <p><%= @booking.treatment.name %> - £<%= @booking.treatment.cost %>
+  <p>date = <%= @booking.date %></p>
+  <p>time = <%= @booking.time %></p>
+  <p>location = <%= @booking.location %></p>
   <%= render "form", beautician: @beautician, booking: @booking %>
   Pay button
 </div>
