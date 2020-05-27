@@ -1,0 +1,18 @@
+<div class="container">
+  <div class="banner">
+    <%= cl_image_tag @beautician.banner_photo.key, height: 300, width: 800, crop: :fill %>
+  </div>
+
+  <div>
+    <h1><%= @beautician.name %></h1>
+    <h1><%= @beautician.location %></h1>
+    <h3><%= @beautician.description %></h3>
+  </div>
+
+  <div>
+    <% @beautician.portfolio_photos.each do |photo| %>
+    <%= cl_image_tag photo.key, height: 300, width: 400, crop: :fill %>
+    <% end %>
+  </div>
+  
+</div>
