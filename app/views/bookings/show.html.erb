@@ -2,6 +2,7 @@
   <h1>Booking Details</h1>
   <h2>Please confirm details</h2>
   <P>status = <%= @booking.status %></p>
-  <p><%= @booking.treatment.name %> - <%= @booking.treatment.cost %>
+  <p><%= @booking.treatment.name %> - £<%= @booking.treatment.cost %>
   <%= render "form", beautician: @beautician, booking: @booking %>
+  Pay button
 </div>
