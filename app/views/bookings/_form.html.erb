@@ -1,0 +1,5 @@
+<%= simple_form_for [beautician, booking] do |f| %>
+  <%= f.input :date, as: :date, html5: true %>
+  <%= f.input :time, as: :time, html5: true %>
+  <%= f.button :submit, class: "btn btn-outline-primary" %>
+<% end %>

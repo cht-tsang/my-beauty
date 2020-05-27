@@ -8,10 +8,21 @@ class BookingsController < ApplicationController
   end
 
   def new
-    
   end
 
   def create
+    # @beautician = beautician.find(params[:beautician_id])
+    @booking = Booking.new(booking_params)
+    
+    @booking.user = current_user
+    
+    if @booking.save
+      flash[:alert] = 'Booking Started!'
+      redirect_to beautician_booking_path(@beautician, @booking)
+    else
+      render :new
+    end
+    
   end
 
   def edit
