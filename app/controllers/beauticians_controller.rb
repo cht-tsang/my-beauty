@@ -17,16 +17,20 @@ class BeauticiansController < ApplicationController
     @beautician = Beautician.new(beautician_params)
     @beautician.user = current_user
       if @beautician.save
-        redirect_to beautician_path
+        redirect_to beautician_path(@beautician)
       else
         render :new
       end
   end
 
+  def show
+    @beautician = Beautician.find(params[:id])
+  end
+
   private
 
   def beautician_params
-    params.require(:beautician).permit(:name, :location, :description, :photos)
+    params.require(:beautician).permit(:name, :location, :description, :banner_photo, portfolio_photos: [] )
   end
 
 end

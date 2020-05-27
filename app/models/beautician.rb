@@ -1,7 +1,8 @@
 class Beautician < ApplicationRecord
   belongs_to :user
   has_many :treatments
-  has_many_attached :photos
+  has_one_attached :banner_photo
+  has_many_attached :portfolio_photos
   validates :name, presence: true, uniqueness: true
   validates :location, presence: true
   validates :description, presence: true
