@@ -4,6 +4,7 @@ class BookingsController < ApplicationController
   end
 
   def show
+    @beautician = Beautician.find(params[:beautician_id])
     @booking = Booking.find(params[:id])
   end
 
@@ -20,7 +21,7 @@ class BookingsController < ApplicationController
       flash[:alert] = 'Booking Started!'
       redirect_to beautician_booking_path(@beautician, @booking)
     else
-      render :new
+      
     end
     
   end
@@ -29,7 +30,16 @@ class BookingsController < ApplicationController
   end
 
   def update
+    @beautician = Beautician.find(params[:beautician_id])
     @booking = Booking.find(params[:id])
+    if @booking.update(booking_params)
+      flash[:alert] = 'Booking updated!'
+      redirect_to beautician_booking_path(@beautician, @booking)
+    else
+      flash[:alert] = 'Booking not updated!'
+    
+      redirect_to beautician_booking_path(@beautician, @booking)
+    end
   end
 
   def destroy
@@ -38,5 +48,6 @@ class BookingsController < ApplicationController
   private
 
   def booking_params
+    params.require(:booking).permit(:date, :time, :location)
   end
 end
