@@ -6,6 +6,12 @@
   <p>date = <%= @booking.date %></p>
   <p>time = <%= @booking.time %></p>
   <p>location = <%= @booking.location %></p>
-  <%= render "form", beautician: @beautician, booking: @booking %>
+
+  <%= simple_form_for @booking do |f| %>
+  <%= f.input :date, as: :date, html5: true %>
+  <%= f.input :time, as: :time, html5: true %>
+  <%= f.input :location %>
+  <%= f.button :submit, class: "btn btn-outline-primary" %>
+<% end %>
   Pay button
 </div>

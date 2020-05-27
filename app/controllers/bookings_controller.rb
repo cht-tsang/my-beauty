@@ -4,41 +4,37 @@ class BookingsController < ApplicationController
   end
 
   def show
-    @beautician = Beautician.find(params[:beautician_id])
     @booking = Booking.find(params[:id])
   end
 
   def new
+    @treatment = Treatment.find(params[:treatment_id])
+    @booking = Booking.new
   end
 
   def create
-    # @beautician = beautician.find(params[:beautician_id])
+    @treatment = Treatment.find(params[:treatment_id])
     @booking = Booking.new(booking_params)
-    
+    @booking.treatment = @treatment
     @booking.user = current_user
     
     if @booking.save
       flash[:alert] = 'Booking Started!'
-      redirect_to beautician_booking_path(@beautician, @booking)
+      redirect_to booking_path(@booking)
     else
-      
+      render :new      
     end
-    
-  end
-
-  def edit
   end
 
   def update
-    @beautician = Beautician.find(params[:beautician_id])
     @booking = Booking.find(params[:id])
     if @booking.update(booking_params)
       flash[:alert] = 'Booking updated!'
-      redirect_to beautician_booking_path(@beautician, @booking)
+      redirect_to booking_path(@booking)
     else
       flash[:alert] = 'Booking not updated!'
     
-      redirect_to beautician_booking_path(@beautician, @booking)
+      redirect_to booking_path(@booking)
     end
   end
 
