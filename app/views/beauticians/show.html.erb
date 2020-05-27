@@ -6,13 +6,22 @@
   <div>
     <h1><%= @beautician.name %></h1>
     <h1><%= @beautician.location %></h1>
-    <h3><%= @beautician.description %></h3>
+    <p><h4><%= @beautician.description %></h4><p>
   </div>
 
-  <div>
-    <% @beautician.portfolio_photos.each do |photo| %>
-    <%= cl_image_tag photo.key, height: 300, width: 400, crop: :fill %>
-    <% end %>
-  </div>
+      <div class="treatments">
+      <h4>Treatments</h4>
+        <% @beautician.treatments.each do |treatment| %>
+          <ul>
+            <li> <b><%= treatment.name %></b>: <%= treatment.description %> - £<%= treatment.cost %> - <%= link_to "Book Now", beautician_booking_path(@beautician, treatment),method: :create, data: {confirm: "Confirm Booking?"}, class: "btn btn-my-beauty"%></li>
+          </ul>
+        <% end %>
+      </div>
   
+  <div>
+    <h2>View our work!</h2>
+      <% @beautician.portfolio_photos.each do |photo| %>
+      <%= cl_image_tag photo.key, height: 300, width: 400, crop: :fill %>
+      <% end %>
+    </div>
 </div>

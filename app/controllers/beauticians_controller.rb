@@ -20,7 +20,7 @@ class BeauticiansController < ApplicationController
   def create 
     @beautician = Beautician.new(beautician_params)
     @beautician.user = current_user
-      if @beautician.save
+    if @beautician.save
         redirect_to beautician_path(@beautician)
       else
         render :new
@@ -32,9 +32,9 @@ class BeauticiansController < ApplicationController
   end
 
   private
-
+  
   def beautician_params
-    params.require(:beautician).permit(:name, :location, :description, :banner_photo, portfolio_photos: [] )
+    params.require(:beautician).permit(:name, :location, :description, :banner_photo, portfolio_photos: [], treatment_ids: [] )
   end
 
 end

@@ -2,6 +2,7 @@
   <p><%= f.input :name %></p>
   <p><%= f.input :location %></p>
   <p><%= f.input :description %></p>
+  <p><%= f.association :treatments, collection: Treatment.all, as: :check_boxes, wrapper: :horizontal_boolean, label: false %></p>
   <p><%= f.input :banner_photo, as: :file %></p>
   <p><%= f.input :portfolio_photos, as: :file, input_html: { multiple: true } %></p>
   <p> <%= f.button :submit, class: "btn btn-primary" %></p
