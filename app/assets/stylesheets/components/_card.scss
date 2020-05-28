@@ -19,10 +19,14 @@
 .portfolio_card {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  
+
 }
 .image_card {
   margin: 5px;
+}
+
+.image_card img {
+  width: 100%
 }
 
 // Smallest device
