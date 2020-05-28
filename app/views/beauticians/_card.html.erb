@@ -1,19 +1,29 @@
 <div class="cards">
+
   <% @beauticians.each do |beautician| %>
-    
+
     <div class="col-lg-4 col-md-6 col-sm-12 p-3">
       <div class="card">
-        <img class="card-img-top img-fluid" src="//via.placeholder.com/350x150" alt="img">
+
+        <div class="image_card">
+          <% if beautician.banner_photo.attached? %>
+            <%= cl_image_tag beautician.banner_photo.key, height: 211, width: 338, crop: :fill %>
+          <%else%>
+          <img src = "/assets/no-img.png">
+          <%end%>
+
+
+            </div>
         <div class="card-body">
           <h4 class="card-title"><%= beautician.name %></h4>
           <p class="card-text"><%= beautician.description %></p>
-          
+
         </div>
         <div class="card-footer text-center bg-white">
           <a class="btn btn-outline-secondary" href="#">View Profile</a>
         </div>
       </div>
     </div>
-    
+
   <% end %>
 </div>
