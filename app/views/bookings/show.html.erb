@@ -8,10 +8,14 @@
   <p>location = <%= @booking.location %></p>
 
   <%= simple_form_for @booking do |f| %>
-  <%= f.input :date, as: :date, html5: true %>
-  <%= f.input :time, as: :time, html5: true %>
-  <%= f.input :location %>
-  <%= f.button :submit, class: "btn btn-outline-primary" %>
-<% end %>
-  Pay button
+    <%= f.input :date, as: :date, html5: true %>
+    <%= f.input :time, as: :time, html5: true %>
+    <%= f.input :location %>
+    <%= f.button :submit, class: "btn btn-outline-primary" %>
+  <% end %>
+
+  <%= form_tag orders_path do %>
+    <%= hidden_field_tag 'booking_id', @booking.id %>
+    <%= submit_tag 'Purchase', class: 'btn btn-primary' %>
+  <% end %>
 </div>
