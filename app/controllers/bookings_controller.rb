@@ -17,7 +17,7 @@ class BookingsController < ApplicationController
     @booking = Booking.new(booking_params)
     @booking.treatment = @treatment
     @booking.user = current_user
-    @booking.price = @booking.treatment.price
+    # @booking.price = @booking.treatment.price
     if @booking.save
       flash[:alert] = 'Booking Started!'
       redirect_to booking_path(@booking)
