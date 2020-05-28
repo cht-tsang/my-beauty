@@ -22,13 +22,14 @@
             <%end%>
           </select>
         </div>
-        <div class="form-group">
+        <%# <div class="form-group">
           <input type="text" class="form-control input-my-beauty" placeholder="Your Postcode" id="your-postcode" name="multiquery[postcode]">
         </div>
         <div class="form-group">
           <input type="text" class="form-control input-my-beauty" placeholder="Booking Date" id="booking-date" name="multiquery[date]">
-        </div>
-        <button type="submit" class="btn btn-my-beauty">Search</button>
+        </div> %>
+        <%# <button type="submit" class="btn btn-my-beauty">Search</button> %>
+        <%= link_to "View Beauticians", beauticians_path, class: "btn btn-my-beauty" %>
       </form>
     </div>
   </div>
