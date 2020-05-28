@@ -39,6 +39,8 @@ gem 'stripe'
 
 gem 'turbolinks', '~> 5'
 
+gem 'stripe_event'
+
 gem 'autoprefixer-rails'
 gem 'font-awesome-sass'
 gem 'simple_form'
