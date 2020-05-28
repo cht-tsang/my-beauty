@@ -37,6 +37,8 @@ gem 'money-rails'
 
 gem 'stripe'
 
+gem 'turbolinks', '~> 5'
+
 gem 'autoprefixer-rails'
 gem 'font-awesome-sass'
 gem 'simple_form'
