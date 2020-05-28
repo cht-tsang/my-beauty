@@ -65,7 +65,6 @@ ActiveRecord::Schema.define(version: 2020_05_28_105720) do
     t.string "state"
     t.string "booking_sku"
     t.integer "amount_cents", default: 0, null: false
-    t.string "amount_currency", default: "GBP", null: false
     t.string "checkout_session_id"
     t.bigint "user_id", null: false
     t.bigint "booking_id", null: false
