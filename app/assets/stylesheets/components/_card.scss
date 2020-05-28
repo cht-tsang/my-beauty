@@ -9,6 +9,22 @@
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
 }
 
+.treatment_card {
+  background-color: #F8F3F3;
+  border-radius: 5px;
+  padding: 10px;
+  width: 100%;
+}
+
+.portfolio_card {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  
+}
+.image_card {
+  margin: 5px;
+}
+
 // Smallest device
 @media (min-width: 100px) and (max-width: 575px) {
   .cards {
