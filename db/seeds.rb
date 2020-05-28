@@ -27,12 +27,12 @@ beautician4 = Beautician.create(description: "Haircuts", location: "London", nam
 beautician5 = Beautician.create(description: "Haircuts", location: "London", name: "Lulu cuticles", user: user5)
 beautician6 = Beautician.create(description: "Haircuts", location: "London", name: "polly's Eyes", user: user6)
 
-file = URI.open('https://res.cloudinary.com/dwldoynuu/image/upload/v1590684575/kqvzg9wncr35njxwys4b4439ecgh.jpg')
-file2 = URI.open('https://res.cloudinary.com/dwldoynuu/image/upload/v1590684574/234tnooetnq4mymlzxvmnqr4o8tr.jpg')
-file3 = URI.open('https://res.cloudinary.com/dwldoynuu/image/upload/v1590684572/y9xfkbszn77l0acllbcvxqyyxqg9.jpg')
-file4 = URI.open('https://res.cloudinary.com/dwldoynuu/image/upload/v1590684927/inz1grwtcpyfxtvqiaq2.jpg')
+file = URI.open('https://res.cloudinary.com/dwldoynuu/image/upload/v1590684927/inz1grwtcpyfxtvqiaq2.jpg')
+file2 = URI.open('https://res.cloudinary.com/dwldoynuu/image/upload/v1590684933/tpt6erylnd9yxnytskdl.jpg')
+file3 = URI.open('https://res.cloudinary.com/dwldoynuu/image/upload/v1590684937/oosbpcd74ynictjz1wzb.jpg')
+file4 = URI.open('https://res.cloudinary.com/dwldoynuu/image/upload/v1590684943/qr4t7c9oc0hhyswrqren.jpg')
 file5 = URI.open('https://res.cloudinary.com/dwldoynuu/image/upload/v1590684948/dgwwjucy1mmdkfomd2qt.jpg')
-file6 = URI.open('https://res.cloudinary.com/dwldoynuu/image/upload/v1590684937/oosbpcd74ynictjz1wzb.jpg')
+file6 = URI.open('https://res.cloudinary.com/dwldoynuu/image/upload/v1590684953/nnoh5krejpuvfqpsuvfi.jpg')
 
 beautician.banner_photo.attach(io: file, filename: 'beauty1.png', content_type: 'image/jpg')
 beautician2.banner_photo.attach(io: file2, filename: 'beauty2.png', content_type: 'image/jpg')
