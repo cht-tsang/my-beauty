@@ -26,6 +26,7 @@ require("channels")
 import "bootstrap";
 import { Application } from "stimulus"
 import { definitionsFromContext } from "stimulus/webpack-helpers"
+import flatpickr from "flatpickr";
 // import { search } from "../library/search";
 // Internal imports, e.g:
 // import { initSelect2 } from '../components/init_select2';
@@ -38,6 +39,11 @@ document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:
   // initSelect2();
   // search();
+  flatpickr("#booking-date", {
+    altInput: true,
+    altFormat: "F j, Y",
+    dateFormat: "Y-m-d"
+  })
 });
 
 

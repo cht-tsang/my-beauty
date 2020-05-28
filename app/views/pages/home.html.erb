@@ -13,9 +13,9 @@
 
   <div class="row">
     <div class="col-md-4 offset-md-6 search-form">
-      <form action="#">
+      <form action="/beauticians">
         <div class="form-group">
-          <select class="form-control input-my-beauty" placeholder="Find your treatment" id="find-treatment">
+          <select class="form-control input-my-beauty" placeholder="Find your treatment" id="find-treatment" name="multiquery[treatment]">
             <option>Choose Your Treatment</option>
             <% @treatments.each do |treatment| %>
             <option value="<%= treatment.id %>"><%= treatment.name %></option>
@@ -23,10 +23,10 @@
           </select>
         </div>
         <div class="form-group">
-          <input type="text" class="form-control input-my-beauty" placeholder="Your Postcode" id="your-postcode">
+          <input type="text" class="form-control input-my-beauty" placeholder="Your Postcode" id="your-postcode" name="multiquery[postcode]">
         </div>
         <div class="form-group">
-          <input type="booking-date" class="form-control input-my-beauty" placeholder="Booking Date" id="booking-date">
+          <input type="text" class="form-control input-my-beauty" placeholder="Booking Date" id="booking-date" name="multiquery[date]">
         </div>
         <button type="submit" class="btn btn-my-beauty">Search</button>
       </form>
