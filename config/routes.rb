@@ -15,5 +15,7 @@ Rails.application.routes.draw do
     resources :payments, only: :new
   end
 
+  get 'search_results', to: "beauticians#search_results"
+
   mount StripeEvent::Engine, at: '/stripe-webhooks'
 end

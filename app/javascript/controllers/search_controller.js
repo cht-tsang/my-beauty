@@ -11,7 +11,7 @@ export default class extends Controller {
     var field = this.inputTarget.value
     
     $.ajax({
-      url: "/beauticians",
+      url: "/search_results",
       method: "GET",
       data: {
         query: field
