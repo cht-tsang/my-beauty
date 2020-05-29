@@ -25,6 +25,17 @@ class BeauticiansController < ApplicationController
     end
   end
 
+  def search_results
+    if params[:query].present?
+      @beauticians = Beautician.global_search(params[:query])
+      respond_to do |format|
+        format.js
+      end
+    else
+      @beauticians = Beautician.all
+    end
+  end
+
   def new
     @beautician = Beautician.new
   end

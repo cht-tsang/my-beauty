@@ -39,11 +39,11 @@ document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:
   // initSelect2();
   // search();
-  flatpickr("#booking-date", {
-    altInput: true,
-    altFormat: "F j, Y",
-    dateFormat: "Y-m-d"
-  })
+  // flatpickr("#booking-date", {
+  //   altInput: true,
+  //   altFormat: "F j, Y",
+  //   dateFormat: "Y-m-d"
+  // })
 });
 
 
