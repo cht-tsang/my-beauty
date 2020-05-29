@@ -1,21 +1,21 @@
-<div>
-  <h1>Booking Details</h1>
-  <h2>Please confirm details</h2>
-  <P>status = <%= @booking.status %></p>
-  <p><%= @booking.treatment.name %> - £<%= @booking.treatment.cost %>
-  <p>date = <%= @booking.date %></p>
-  <p>time = <%= @booking.time %></p>
-  <p>location = <%= @booking.location %></p>
+<div class="container">
+  <div class="row d-flex justify-content-center">
+    <div>
+      <h1>Booking Details</h1>
+      <h2>Please confirm details and pay</h2>
 
-  <%= simple_form_for @booking do |f| %>
-    <%= f.input :date, as: :date, html5: true %>
-    <%= f.input :time, as: :time, html5: true %>
-    <%= f.input :location %>
-    <%= f.button :submit, class: "btn btn-outline-primary" %>
-  <% end %>
+      <p><%= @booking.treatment.name %> - £<%= @booking.treatment.cost %>
+      <p>date = <%= @booking.date.strftime("%F") %></p>
+      <p>time = <%= @booking.time.strftime("%H:%M") %></p>
+      <p>location = <%= @booking.location %></p>
 
-  <%= form_tag orders_path do %>
-    <%= hidden_field_tag 'booking_id', @booking.id %>
-    <%= submit_tag 'Purchase', class: 'btn btn-primary' %>
-  <% end %>
+      <%= form_tag orders_path do %>
+        <%= hidden_field_tag 'booking_id', @booking.id %>
+        <%= submit_tag 'Purchase', class: 'btn btn-primary' %>
+      <% end %>
+    </div>
+    <div>
+      <img src="https://res.cloudinary.com/dwldoynuu/image/upload/v1590751977/Health_Beauty_Salon_qmqeqy.jpg" alt="flowers" width="800" style="border: 2px solid white; margin-top: 5px;">
+    </div>
+  </div>
 </div>
