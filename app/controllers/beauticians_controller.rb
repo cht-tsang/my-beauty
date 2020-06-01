@@ -60,6 +60,15 @@ class BeauticiansController < ApplicationController
 
   def show
     @beautician = Beautician.find(params[:id])
+
+    beauticianmap = Beautician.geocoded 
+
+    @markers = beauticianmap.map do |beautician|
+      {
+        lat: beautician.latitude,
+        lng: beautician.longitude
+      }
+    end
   end
 
   private
