@@ -9,20 +9,28 @@ class BeauticiansController < ApplicationController
       elsif params[:multiquery].present?
         @beauticians = Beautician.all
         if params[:multiquery][:treatment]
-          @beauticians = @beauticians.select{|beautician| beautician.treatments.include?(Treatment.find(params[:multiquery][:treatment].to_i))}
+          
+          beauticians = Treatment.where(category: params[:multiquery][:treatment]).map do |treatment|
+            @beauticians.select{|beautician| beautician.treatments.include?(treatment)}.first
+            
+          end
+          @beauticians = beauticians
+          # @beauticians = @beauticians.select{|beautician| beautician.treatments.include?(Treatment.where(category: params[:multiquery][:treatment]))}
         end
         if params[:multiquery][:postcode]
+          @beauticians = Beautician.near(params[:multiquery][:postcode], 15)
         end
-        if params[:multiquery][:date]
-        end
+        
           # @beauticians = @beauticians
       end
       # respond_to do |format|
       #   format.js
       # end
+      
     else
       @beauticians = Beautician.all
     end
+  
   end
 
   def search_results
