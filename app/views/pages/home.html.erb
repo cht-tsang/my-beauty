@@ -16,9 +16,12 @@
       <form action="/beauticians">
         <div class="form-group">
           <select class="form-control input-my-beauty" placeholder="Find your treatment" id="find-treatment" name="multiquery[treatment]">
-            <option>Choose Your Treatment</option>
-            <% @treatments.each do |treatment| %>
-            <option value="<%= treatment.id %>"><%= treatment.name %></option>
+            <option>Choose Your Treatment category</option>
+            <% treatments = @treatments.uniq{|e| [e.category]} %>
+            <% treatments.each do |treatment| %>
+              
+              <option value="<%= treatment.category %>"><%= treatment.category %></option>
+              
             <%end%>
           </select>
         </div>
