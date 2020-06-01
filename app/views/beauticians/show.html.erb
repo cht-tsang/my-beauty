@@ -37,4 +37,18 @@
   <div>
     <h2 class="text-center">Reviews</h2>
   </div>
+  <% @beautician.reviews.each do |review| %>
+  <ul>
+      <li class="treatment_card">
+        <div class="d-flex justify-content-between"> 
+          <div class="treatment_name">
+              <b><%= review.title %></b>
+          </div> 
+          <div class="price"><%= review.rating %> stars </div> 
+          </div> 
+        <br> 
+        <%= review.content %></li>
+  </ul>
+  <% end %>
+  
 </div>

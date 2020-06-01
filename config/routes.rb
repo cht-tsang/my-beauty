@@ -4,13 +4,13 @@ Rails.application.routes.draw do
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
   resources :beauticians
   resources :treatments, only: [:index, :show] do
-    resources :bookings, only: [:new, :create]
+    resources :bookings, only: [:new, :create] 
+  end 
+  resources :bookings, except: [:new, :create] do
     resources :reviews, except: [:destroy]
   end
-  resources :bookings, except: [:new, :create]
+  
   resources :reviews, only: [:destroy]
-
-
   resources :orders, only: [:show, :create] do
     resources :payments, only: :new
   end
