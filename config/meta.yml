@@ -1,5 +1,5 @@
 meta_product_name: "My Beauty"
 meta_title: "My Beauty - My Beauty My Way"
 meta_description: "Beauty Treatments in the comfort of your own home"
-meta_image: "logo.png" # should exist in `app/assets/images/`
+meta_image: "og_image.png" # should exist in `app/assets/images/`
 # twitter_account: "@product_twitter_account"   # required for Twitter Cards
