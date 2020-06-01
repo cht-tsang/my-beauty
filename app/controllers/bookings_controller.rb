@@ -22,7 +22,7 @@ class BookingsController < ApplicationController
       flash[:alert] = 'Booking Started!'
       redirect_to booking_path(@booking)
     else
-      render :new      
+      render :new
     end
   end
 
@@ -33,13 +33,15 @@ class BookingsController < ApplicationController
       redirect_to booking_path(@booking)
     else
       flash[:alert] = 'Booking not updated!'
-    
+
       redirect_to booking_path(@booking)
     end
   end
 
   def destroy
   end
+
+
 
   private
 
