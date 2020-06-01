@@ -33,6 +33,7 @@ import flatpickr from "flatpickr";
 
 import { initAutocomplete } from '../plugins/init_autocomplete';
 import { initAutocomplete2 } from '../plugins/init_autocomplete';
+import { initMapbox } from '../plugins/init_mapbox';
 
 const application = Application.start()
 const context = require.context("../controllers", true, /\.js$/)
@@ -49,6 +50,7 @@ document.addEventListener('turbolinks:load', () => {
   // })
   initAutocomplete();
   initAutocomplete2();
+  initMapbox();
 });
 
 
