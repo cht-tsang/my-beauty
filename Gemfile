@@ -37,8 +37,9 @@ gem 'money-rails'
 
 gem 'stripe'
 
+gem 'geocoder'
 
-gem 'turbolinks', '~> 5'
+
 
 gem 'stripe_event'
 

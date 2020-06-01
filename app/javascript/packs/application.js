@@ -31,6 +31,8 @@ import flatpickr from "flatpickr";
 // Internal imports, e.g:
 // import { initSelect2 } from '../components/init_select2';
 
+import { initAutocomplete } from '../plugins/init_autocomplete';
+
 const application = Application.start()
 const context = require.context("../controllers", true, /\.js$/)
 application.load(definitionsFromContext(context))
@@ -44,6 +46,7 @@ document.addEventListener('turbolinks:load', () => {
   //   altFormat: "F j, Y",
   //   dateFormat: "Y-m-d"
   // })
+  initAutocomplete();
 });
 
 
