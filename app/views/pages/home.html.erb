@@ -1,4 +1,4 @@
-<body>
+
 
 <div class="bg">
 
@@ -19,9 +19,9 @@
             <option>Choose Your Treatment category</option>
             <% treatments = @treatments.uniq{|e| [e.category]} %>
             <% treatments.each do |treatment| %>
-              
+
               <option value="<%= treatment.category %>"><%= treatment.category %></option>
-              
+
             <%end%>
           </select>
         </div>
@@ -78,5 +78,21 @@
     <p>A facial is essentially a multi-step skin treatment that is one of the best ways to take care of your skin.</p>
   </div>
 </div>
+<div style="height: 20px"></div>
 
-</body>
+<div class="container-fluid review-carousel" style="background-color: #e0dede">
+  <div class="scroller">
+    <div>
+      <div class="text-center mt-4"><h4>What people say?</h4></div>
+      <div class="text-center review-content">"Very convenient service. You can always find what you need at any time."</div>
+    </div>
+    <div>
+      <div class="text-center mt-4"><h4>What people say?</h4></div>
+      <div class="text-center review-content">"Excellent service and very professional. Thank you for always being nice and doing a great job."</div>
+    </div>
+    <div>
+      <div class="text-center mt-4"><h4>What people say?</h4></div>
+      <div class="text-center review-content">"Brilliant treatment and super service"</div>
+    </div>
+  </div>
+</div>
