@@ -8,7 +8,6 @@
       <p>date = <%= @booking.date.strftime("%F") %></p>
       <p>time = <%= @booking.time.strftime("%H:%M") %></p>
       <p>location = <%= @booking.location %></p>
-      <p><%= link_to 'Leave a review', new_booking_review_path(@booking) %></p>
 
       <%= form_tag orders_path do %>
         <%= hidden_field_tag 'booking_id', @booking.id %>
