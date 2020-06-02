@@ -27,6 +27,9 @@ import "bootstrap";
 import { Application } from "stimulus"
 import { definitionsFromContext } from "stimulus/webpack-helpers"
 import flatpickr from "flatpickr";
+
+
+
 // import { search } from "../library/search";
 // Internal imports, e.g:
 // import { initSelect2 } from '../components/init_select2';
@@ -34,6 +37,8 @@ import flatpickr from "flatpickr";
 import { initAutocomplete } from '../plugins/init_autocomplete';
 import { initAutocomplete2 } from '../plugins/init_autocomplete';
 import { initMapbox } from '../plugins/init_mapbox';
+
+import { initStarRating } from '../plugins/init_star_rating';
 
 const application = Application.start()
 const context = require.context("../controllers", true, /\.js$/)
@@ -51,6 +56,7 @@ document.addEventListener('turbolinks:load', () => {
   initAutocomplete();
   initAutocomplete2();
   initMapbox();
+  initStarRating();
 });
 
 
