@@ -36,6 +36,7 @@ import flatpickr from "flatpickr";
 
 import { initAutocomplete } from '../plugins/init_autocomplete';
 import { initAutocomplete2 } from '../plugins/init_autocomplete';
+import { initAutocomplete3 } from '../plugins/init_autocomplete';
 import { initMapbox } from '../plugins/init_mapbox';
 
 import { initStarRating } from '../plugins/init_star_rating';
@@ -55,6 +56,7 @@ document.addEventListener('turbolinks:load', () => {
   // })
   initAutocomplete();
   initAutocomplete2();
+  initAutocomplete3();
   initMapbox();
   initStarRating();
 });

@@ -14,5 +14,13 @@ const initAutocomplete2 = () => {
   }
 };
 
+const initAutocomplete3 = () => {
+  const addressInput = document.getElementById('booking_location');
+  if (addressInput) {
+    places({ container: addressInput });
+  }
+};
+
 export { initAutocomplete };
 export { initAutocomplete2 };
+export { initAutocomplete3 };
