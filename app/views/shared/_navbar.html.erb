@@ -20,6 +20,7 @@
         <li class="nav-item dropdown">
           <%= image_tag "https://images.unsplash.com/flagged/photo-1531889236320-35bcb7d1a5fd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=80", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
           <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+          <%= link_to "My Account", my_account_path, class: "dropdown-item" %>
             <%= link_to "Create Beautician Page", new_beautician_path, class: "dropdown-item" %>
             <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
           </div>

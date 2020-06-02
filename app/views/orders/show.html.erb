@@ -1,7 +1,7 @@
-<div class="container text-center">
+<div class="container-fluid text-center" style="background-color: #FEFFFF">
   <div class="row py-4">
-    
-    <div class="col">
+
+    <div class="col-md-6 mt-4 pt-4">
       <h1>Order #<%= @order.id %> <small><span class="badge badge-primary"><%= @order.state %></span></small></h1>
       <ul class="list-unstyled">
         <li><strong>ISSUED ON</strong> <%= @order.created_at.to_date %></li>
@@ -11,7 +11,7 @@
       </ul>
       <h1>Enjoy your Treatment!</h1>
     </div>
-    <img src="https://image.freepik.com/free-photo/beautiful-woman-with-red-lips-manicure_106029-4.jpg" alt="woman_red" height="600">
+    <%= image_tag "flowers.jpg", class: "flowers-img"%>
 
   </div>
 </div>

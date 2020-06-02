@@ -46,16 +46,23 @@ class BeauticiansController < ApplicationController
 
   def new
     @beautician = Beautician.new
+    @beautician_treatment = Treatment.new
   end
 
   def create
     @beautician = Beautician.new(beautician_params)
     @beautician.user = current_user
-    if @beautician.save
+      if @beautician.save
+        params.dig(:beautician, :other, :treatments)&.each do |id|
+          next if id.blank?
+          treatment = Treatment.find(id.to_i)
+          BeauticianTreatment.create!(treatment: treatment, beautician: @beautician, name: treatment.name, description: treatment.description, cost: treatment.cost)
+        end
         redirect_to beautician_path(@beautician)
       else
         render :new
       end
+
   end
 
   def show

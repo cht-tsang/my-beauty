@@ -10,7 +10,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 2020_06_02_094145) do
+=======
+ActiveRecord::Schema.define(version: 2020_06_02_134338) do
+>>>>>>> master
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -34,6 +38,28 @@ ActiveRecord::Schema.define(version: 2020_06_02_094145) do
     t.string "checksum", null: false
     t.datetime "created_at", null: false
     t.index ["key"], name: "index_active_storage_blobs_on_key", unique: true
+  end
+
+  create_table "beautician_treatment_tables", force: :cascade do |t|
+    t.bigint "beautician_id", null: false
+    t.bigint "treatment_id", null: false
+    t.string "name"
+    t.string "description"
+    t.integer "cost"
+    t.index ["beautician_id"], name: "index_beautician_treatment_tables_on_beautician_id"
+    t.index ["treatment_id"], name: "index_beautician_treatment_tables_on_treatment_id"
+  end
+
+  create_table "beautician_treatments", force: :cascade do |t|
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.bigint "beautician_id", null: false
+    t.bigint "treatment_id", null: false
+    t.string "name"
+    t.string "description"
+    t.integer "cost"
+    t.index ["beautician_id"], name: "index_beautician_treatments_on_beautician_id"
+    t.index ["treatment_id"], name: "index_beautician_treatments_on_treatment_id"
   end
 
   create_table "beauticians", force: :cascade do |t|
@@ -114,6 +140,10 @@ ActiveRecord::Schema.define(version: 2020_06_02_094145) do
   end
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
+  add_foreign_key "beautician_treatment_tables", "beauticians"
+  add_foreign_key "beautician_treatment_tables", "treatments"
+  add_foreign_key "beautician_treatments", "beauticians"
+  add_foreign_key "beautician_treatments", "treatments"
   add_foreign_key "beauticians", "users"
   add_foreign_key "bookings", "treatments"
   add_foreign_key "bookings", "users"
