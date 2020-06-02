@@ -1,0 +1,11 @@
+<div class="container">
+  <h2 >My Bookings</h2>
+    <% @bookings.each do |booking| %>
+    <div class="treatment_card">
+      <ul>
+        <li><%= link_to "View Booking", booking_path(booking), class: 'btn btn-my-beauty' %></li>
+        <li><%= link_to 'Leave a review', new_booking_review_path(booking), class: 'btn btn-my-beauty' %></li>
+      </ul>
+    </div>
+  <% end %>
+</div>

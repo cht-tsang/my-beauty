@@ -4,4 +4,10 @@ class PagesController < ApplicationController
   def home
     @treatments = Treatment.all
   end
+
+  def account
+    @user = current_user
+    @bookings = Booking.where(user: @user)
+  end
+
 end
