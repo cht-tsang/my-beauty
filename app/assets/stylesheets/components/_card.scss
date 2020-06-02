@@ -8,6 +8,9 @@
   width: 350px;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
 }
+.treatment-service-card {
+  min-height: 282px;
+}
 
 .treatment_card {
   background-color: #F8F3F3;
@@ -27,6 +30,11 @@
 
 .image_card img {
   width: 100%
+}
+
+.price-bold {
+  font-size: 22px;
+  font-weight: bold;
 }
 
 // Smallest device
@@ -63,3 +71,6 @@
     grid-template-columns: 1fr 1fr 1fr;
   }
 }
+
+
+

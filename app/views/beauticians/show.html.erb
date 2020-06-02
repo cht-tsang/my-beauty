@@ -4,28 +4,28 @@
   </div>
 
   <div class="text-center">
-    <h1><%= @beautician.name %></h1>
+    <h1 class="pt-4"><%= @beautician.name %></h1>
     <h3><%= @beautician.location %></h3>
     <p><%= @beautician.description %><p>
   </div>
 <br>
-      <div class="text-center">
-      <h4>Treatments</h4>
-        <% @beautician.treatments.each do |treatment| %>
-          <ul>
-            <li class="treatment_card">
-              <div class="d-flex justify-content-between"> 
-                <div class="treatment_name">
-                  <b><%= treatment.name %></b>
-                </div> 
-                <div class="price">£<%= treatment.cost %> </div> 
-                <div class="booking_button"> <%= link_to "Book Now",  new_treatment_booking_path(treatment), class: "btn btn-my-beauty"%> </div>
-              </div> 
-              <br> 
-              <%= treatment.description %></li>
-          </ul>
-        <% end %>
+  <div class="cards">
+    <% @beautician.treatments.each do |treatment| %>
+    <div class="col-lg-4 col-md-6 col-sm-12 p-3">
+      <div class="card treatment-service-card">
+        <div class="card-body">
+          <h4 class="card-title"><%= treatment.name %></h4>
+          <p class="card-text"><%= treatment.description %></p>
+        </div>
+        <div class="card-footer text-center bg-white">
+          <p class="card-text price-bold">£<%= treatment.cost %></p>
+          <%= link_to "Book Now",  new_treatment_booking_path(treatment), class: "btn btn-my-beauty"%>
+        </div>
       </div>
+    </div>
+  <% end %>
+</div>
+
 <br>
 <h2 class="text-center">See Our Work</h2>
   <div class="portfolio_card">
@@ -47,15 +47,22 @@
   <% @beautician.reviews.each do |review| %>
   <ul>
       <li class="treatment_card">
-        <div class="d-flex justify-content-between"> 
+        <div class="d-flex justify-content-between">
           <div class="treatment_name">
               <b><%= review.title %></b>
-          </div> 
-          <div class="price"><%= review.rating %> stars </div> 
-          </div> 
-        <br> 
+          </div>
+          <div class="price"><%= review.rating %> stars </div>
+          </div>
+        <br>
         <%= review.content %></li>
   </ul>
   <% end %>
-  
+
 </div>
+
+
+
+
+
+
+
