@@ -3,7 +3,9 @@ Rails.application.routes.draw do
   root to: 'pages#home'
   get 'my_account', to: 'pages#account'
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
-  resources :beauticians #when adding new and create for treatment nest within beauticians
+  resources :beauticians do #when adding new and create for treatment nest within beauticians
+    resources :beautician_treatments, only: [:new, :create]
+  end
   resources :treatments, only: [:index, :show] do
     resources :bookings, only: [:new, :create] 
   end 
