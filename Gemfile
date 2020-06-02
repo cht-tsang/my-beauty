@@ -40,7 +40,6 @@ gem 'stripe'
 gem 'geocoder'
 
 
-
 gem 'stripe_event'
 
 gem 'autoprefixer-rails'
