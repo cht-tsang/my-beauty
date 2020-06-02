@@ -10,7 +10,7 @@
   </div>
 <br>
   <div class="cards">
-    <% @beautician.treatments.each do |treatment| %>
+    <% @beautician.beautician_treatments.each do |treatment| %>
     <div class="col-lg-4 col-md-6 col-sm-12 p-3">
       <div class="card treatment-service-card">
         <div class="card-body">
@@ -51,7 +51,39 @@
           <div class="treatment_name">
               <b><%= review.title %></b>
           </div>
-          <div class="price"><%= review.rating %> stars </div>
+          <div class="rating">
+            <% if review.rating == 1 %>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star"></span>
+              <span class="fa fa-star"></span>
+              <span class="fa fa-star"></span>
+              <span class="fa fa-star"></span>
+            <% elsif review.rating == 2 %>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star"></span>
+              <span class="fa fa-star"></span>
+              <span class="fa fa-star"></span>
+            <% elsif review.rating == 3 %>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star"></span>
+              <span class="fa fa-star"></span>
+            <% elsif review.rating == 4 %>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star"></span>
+            <% else %>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+            <% end %>
+          </div>
           </div>
         <br>
         <%= review.content %></li>

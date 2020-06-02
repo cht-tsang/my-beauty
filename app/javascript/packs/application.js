@@ -30,18 +30,26 @@ import "bootstrap";
 import { Application } from "stimulus"
 import { definitionsFromContext } from "stimulus/webpack-helpers"
 import flatpickr from "flatpickr";
+
+
+
 // import { search } from "../library/search";
 // Internal imports, e.g:
 // import { initSelect2 } from '../components/init_select2';
 
 import { initAutocomplete } from '../plugins/init_autocomplete';
 import { initAutocomplete2 } from '../plugins/init_autocomplete';
+import { initAutocomplete3 } from '../plugins/init_autocomplete';
 import { initMapbox } from '../plugins/init_mapbox';
+
 
 
 import 'slick-carousel';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
+
+import { initStarRating } from '../plugins/init_star_rating';
+
 
 const application = Application.start()
 const context = require.context("../controllers", true, /\.js$/)
@@ -58,11 +66,13 @@ document.addEventListener('turbolinks:load', () => {
   // })
   initAutocomplete();
   initAutocomplete2();
+  initAutocomplete3();
   initMapbox();
   $('.scroller').slick({
     autoplay: true,
     centerMode: true
   });
+  initStarRating();
 });
 
 

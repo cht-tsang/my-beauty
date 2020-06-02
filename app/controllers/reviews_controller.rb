@@ -9,9 +9,11 @@ class ReviewsController < ApplicationController
     @booking = Booking.find(params[:booking_id])
     @review.beautician = @booking.treatment.beautician
     @review.booking = @booking
+    @review.user_id = current_user.id
     if @review.save
       redirect_to booking_path(@booking)
     else
+      flash[:alert] = "Something went wrong. Review did not save."
       render :new
     end
   end

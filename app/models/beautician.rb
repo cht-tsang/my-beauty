@@ -1,6 +1,7 @@
 class Beautician < ApplicationRecord
   belongs_to :user
-  has_many :treatments
+  has_many :beautician_treatments
+  has_many :treatments, through: :beautician_treatments
   has_many :bookings, through: :treatments
   has_many :reviews, dependent: :destroy
   has_one_attached :banner_photo

@@ -1,5 +1,5 @@
 class Treatment < ApplicationRecord
-  belongs_to :beautician
+  has_many :beauticians, through: :beautician_treatment
 
   validates :name, presence: true
   validates :cost, presence: true
