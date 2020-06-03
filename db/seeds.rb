@@ -194,3 +194,4 @@ BeauticianTreatment.create(beautician: beautician, treatment: lcut)
 BeauticianTreatment.create(beautician: beautician, treatment: fath)
 BeauticianTreatment.create(beautician: beautician, treatment: fama)
 BeauticianTreatment.create(beautician: beautician, treatment: mani)
+

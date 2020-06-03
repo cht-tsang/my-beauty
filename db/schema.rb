@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_06_03_091956) do
+ActiveRecord::Schema.define(version: 2020_06_03_110153) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -117,10 +117,8 @@ ActiveRecord::Schema.define(version: 2020_06_03_091956) do
     t.integer "cost"
     t.text "description"
     t.string "category"
-    t.bigint "beautician_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["beautician_id"], name: "index_treatments_on_beautician_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -148,5 +146,4 @@ ActiveRecord::Schema.define(version: 2020_06_03_091956) do
   add_foreign_key "reviews", "beauticians"
   add_foreign_key "reviews", "bookings"
   add_foreign_key "reviews", "users"
-  add_foreign_key "treatments", "beauticians"
 end
