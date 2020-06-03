@@ -9,7 +9,6 @@ class BookingsController < ApplicationController
 
   def new
     @treatment = BeauticianTreatment.find(params[:beautician_treatment_id])
-  
     @booking = Booking.new
   end
 
@@ -25,6 +24,10 @@ class BookingsController < ApplicationController
     else
       render :new
     end
+  end
+
+  def edit
+      @beautician_treatment = BeauticianTreatment.find(params[:id])
   end
 
   def update

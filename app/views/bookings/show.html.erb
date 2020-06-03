@@ -5,9 +5,9 @@
       <h2>Please confirm details and pay</h2>
 
       <p><%= @booking.beautician_treatment.name %> - £<%= @booking.beautician_treatment.cost %>
-      <p>date = <%= @booking.date.strftime("%F") %></p>
-      <p>time = <%= @booking.time.strftime("%H:%M") %></p>
-      <p>location = <%= @booking.location %></p>
+      <p>Date = <%= @booking.date.strftime("%F") %></p>
+      <p>Time = <%= @booking.time.strftime("%H:%M") %></p>
+      <p>Location = <%= @booking.location %></p>
 
       <%= form_tag orders_path do %>
         <%= hidden_field_tag 'booking_id', @booking.id %>

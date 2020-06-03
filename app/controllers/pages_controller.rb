@@ -7,6 +7,9 @@ class PagesController < ApplicationController
 
   def account
     @user = current_user
+    if @user.beauticians.present?
+      redirect_to beautician_treatments_path
+    end
     @bookings = Booking.where(user: @user)
   end
 
