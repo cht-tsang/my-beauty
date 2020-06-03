@@ -80,17 +80,6 @@ file34 = Rails.root.join("app/assets/images/people-2587157_1920.jpg").open
 
 puts "opened photos"
 
-file7.rewind
-file8.rewind
-file9.rewind
-file10.rewind
-file11.rewind
-file12.rewind
-file13.rewind
-file14.rewind
-file15.rewind
-file16.rewind
-file17.rewind
 
 beautician.banner_photo.attach(io: file7, filename: 'beauty1.png', content_type: 'image/jpg')
 beautician2.banner_photo.attach(io: file8, filename: 'beauty2.png', content_type: 'image/jpg')
