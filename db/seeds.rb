@@ -7,8 +7,9 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 Review.destroy_all
 Order.destroy_all
-BeauticianTreatment.destroy_all
 Booking.destroy_all
+BeauticianTreatment.destroy_all
+
 Treatment.destroy_all
 Beautician.destroy_all
 User.destroy_all
