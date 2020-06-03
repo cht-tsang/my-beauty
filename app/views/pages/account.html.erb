@@ -1,18 +1,25 @@
-<div class="container">
-  <h2 >My Bookings</h2>
+<div class="bg-img">
+<div class="container" style="padding-top: 150px">
+  <h2 style="padding-left: 430px">My Bookings</h2>
     <% @bookings.each do |booking| %>
-    <div class="treatment_card">
-      <ul>
-        <li><%= link_to "View Booking", booking_path(booking), class: 'btn btn-my-beauty' %></li>
-        <li><%= link_to 'Leave a review', new_booking_review_path(booking), class: 'btn btn-my-beauty' %></li>
-      </ul>
+    <div class="row">
+        <div class="col-md-6 offset-md-2 ">
+          <div style="padding: 24px" class="card-account">
+            <%= link_to "View Booking", booking_path(booking), class: 'btn btn-my-beauty' %>
+            <%= link_to 'Leave a review', new_booking_review_path(booking), class: 'btn btn-my-beauty' %>
+        </div>
+        </div>
+
+
     </div>
     <% end %>
 
   <div>
-  <li><%= link_to 'View Treatments', beautician_treatments_path, class: 'btn btn-my-beauty' %></li>
+    <%if @user.beauticians.present?%>
+    <div style="padding: 20px 200px">
+      <li><%= link_to 'View Treatments', beautician_treatments_path, class: 'btn btn-my-beauty' %></li>
+    </div>
+  <% end %>
   </div>
-
-  
-
+</div>
 </div>
