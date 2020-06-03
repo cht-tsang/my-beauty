@@ -13,6 +13,7 @@ Treatment.destroy_all
 Beautician.destroy_all
 User.destroy_all
 
+puts "deleted db"
 
 require "open-uri"
 
@@ -39,6 +40,8 @@ beautician8 = Beautician.create(description: "Coming to you for the best service
 beautician9 = Beautician.create(description: "Treatments right in the city", location: "Liverpool Street, London", name: "Bella's City Treatments", user: user9)
 beautician10 = Beautician.create(description: "Nail treatments anytime, anywhere.", location: "Brixton, London", name: "Rachel's Nails", user: user10)
 beautician11 = Beautician.create(description: "All services available on the go", location: "Shoreditch, London", name: "Susie's Stylings", user: user11)
+
+puts "created user & beautician"
 
 file = Rails.root.join("app/assets/images/image1.jpg").open
 file2 = Rails.root.join("app/assets/images/image2.jpg").open
@@ -75,6 +78,20 @@ file32 = Rails.root.join("app/assets/images/manicure-1365552_1920.jpg").open
 file33 = Rails.root.join("app/assets/images/people-2583493_1920.jpg").open
 file34 = Rails.root.join("app/assets/images/people-2587157_1920.jpg").open
 
+puts "opened photos"
+
+file7.rewind
+file8.rewind
+file9.rewind
+file10.rewind
+file11.rewind
+file12.rewind
+file13.rewind
+file14.rewind
+file15.rewind
+file16.rewind
+file17.rewind
+
 beautician.banner_photo.attach(io: file7, filename: 'beauty1.png', content_type: 'image/jpg')
 beautician2.banner_photo.attach(io: file8, filename: 'beauty2.png', content_type: 'image/jpg')
 beautician3.banner_photo.attach(io: file9, filename: 'beauty3.png', content_type: 'image/jpg')
@@ -86,6 +103,8 @@ beautician8.banner_photo.attach(io: file14, filename: 'beauty8.png', content_typ
 beautician9.banner_photo.attach(io: file15, filename: 'beauty9.png', content_type: 'image/jpg')
 beautician10.banner_photo.attach(io: file16, filename: 'beauty10.png', content_type: 'image/jpg')
 beautician11.banner_photo.attach(io: file17, filename: 'beauty11.png', content_type: 'image/jpg')
+
+puts "photos for banners attached"
 
 file13 = Rails.root.join("app/assets/images/allie-89k7poPsypk-unsplash.jpg").open
 file14 = Rails.root.join("app/assets/images/antonika-chanel-jmRbgqXLCI0-unsplash.jpg").open
