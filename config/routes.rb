@@ -7,12 +7,15 @@ Rails.application.routes.draw do
     resources :beautician_treatments, only: [:new, :create]
   end
   resources :treatments, only: [:index, :show] do
-    resources :bookings, only: [:new, :create] 
+    # resources :bookings, only: [:new, :create] 
   end 
   resources :bookings, except: [:new, :create] do
     resources :reviews, except: [:destroy]
   end
-  resources :beautician_treatments, only: [:edit, :update, :index]
+  resources :beautician_treatments, only: [:edit, :update, :index] do
+    resources :bookings, only: [:new, :create] 
+  end
+
   resources :reviews, only: [:destroy]
   resources :orders, only: [:show, :create] do
     resources :payments, only: :new
