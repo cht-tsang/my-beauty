@@ -181,11 +181,12 @@ beautician11.portfolio_photos.attach(io: file61, filename: 'beauty55.png', conte
 beautician.portfolio_photos.attach(io: file62, filename: 'beauty56.png', content_type: 'image/jpg')
 beautician2.portfolio_photos.attach(io: file63, filename: 'beauty57.png', content_type: 'image/jpg')
 
-Treatment.create(name: "Ladies' Haircut", cost: 30, description: "Trendy Haircuts for Women", category: "Hair")
-Treatment.create(name: "Facial Threading", cost: 10, description: "Threading allows for a more defined and precise shape and can create better definition for eyebrows", category: "Hair removal")
-Treatment.create(name: "Face Massage", cost: 35, description: "Face massage may be used to relieve tension and possibly control age-related phenomena, such as wrinkling.", category: "Massage")
-Treatment.create(name: "Manicure", cost: 20, description: "A manicure is a beauty treatment which uses special tools, creams, waxes and / or massage techniques to leave your nails and hands healthy", category: "Nails")
-Treatment.create(name: "Eyelash Extensions", cost: 40, description: "Eyelash Extensions is a method used by eyelash technicians to enhance the length, thickness, and fullness of natural eyelashes", category: "Face")
-Treatment.create(name: "Men's Haircut", cost: 25, description: "Fashionable Haircuts for Men", category: "Hair")
+lcut = Treatment.create(name: "Ladies' Haircut", cost: 30, description: "Trendy Haircuts for Women", category: "Hair")
+fath = Treatment.create(name: "Facial Threading", cost: 10, description: "Threading allows for a more defined and precise shape and can create better definition for eyebrows", category: "Hair removal")
+fama = Treatment.create(name: "Face Massage", cost: 35, description: "Face massage may be used to relieve tension and possibly control age-related phenomena, such as wrinkling.", category: "Massage")
+mani = Treatment.create(name: "Manicure", cost: 20, description: "A manicure is a beauty treatment which uses special tools, creams, waxes and / or massage techniques to leave your nails and hands healthy", category: "Nails")
+eyex = Treatment.create(name: "Eyelash Extensions", cost: 40, description: "Eyelash Extensions is a method used by eyelash technicians to enhance the length, thickness, and fullness of natural eyelashes", category: "Face")
+mcut = Treatment.create(name: "Men's Haircut", cost: 25, description: "Fashionable Haircuts for Men", category: "Hair")
+wax = Treatment.create(name: "Waxing", cost: 35, description: "Get rid of any unwanted hair leaving only the smoothest skin", category: "Hair removal")
 
 BeauticianTreatment.create(beautician: ,treatment: )
