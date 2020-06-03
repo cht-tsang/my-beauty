@@ -22,9 +22,10 @@ user4 = User.create(email: "user4@gmail.com", password: "123456")
 user5 = User.create(email: "user5@gmail.com", password: "123456")
 user6 = User.create(email: "user6@gmail.com", password: "123456")
 user7 = User.create(email: "user7@gmail.com", password: "123456")
-user9 = User.create(email: "user8@gmail.com", password: "123456")
-user10 = User.create(email: "user9@gmail.com", password: "123456")
-user11 = User.create(email: "user10@gmail.com", password: "123456")
+user8 = User.create(email: "user8@gmail.com", password: "123456")
+user9 = User.create(email: "user9@gmail.com", password: "123456")
+user10 = User.create(email: "user10@gmail.com", password: "123456")
+user11 = User.create(email: "user11@gmail.com", password: "123456")
 
 beautician = Beautician.create(description: "Quality haircuts from yours truely!", location: "Shoreditch", name: "Anna Haircuts", user: user)
 beautician2 = Beautician.create(description: "Manicures from the one and only MIMI.", location: "Shoreditch", name: "Mimi Manicures", user: user2)
@@ -66,7 +67,7 @@ file22 = Rails.root.join("app/assets/images/korie-cull-ggtdbP92hf8-unsplash.jpg"
 file23 = Rails.root.join("app/assets/images/kris-atomic-Xa8fX8bQCgs-unsplash.jpg").open
 file24 = Rails.root.join("app/assets/images/raphael-lovaski-Pe9IXUuC6QU-unsplash.jpg").open
 file25 = Rails.root.join("app/assets/images/rashid-khreiss-pVw3XzhdKJg-unsplash.jpg").open
-file26 = Rails.root.join("app/assets/images/rune-enstad-cowLgyb63c4-unsplash").open
+file26 = Rails.root.join("app/assets/images/rune-enstad-cowLgyb63c4-unsplash.jpg").open
 file27 = Rails.root.join("app/assets/images/rune-enstad-qeuJczNo54w-unsplash.jpg").open
 file28 = Rails.root.join("app/assets/images/saskia-fairfull-7ZaBZ543oo8-unsplash.jpg").open
 file29 = Rails.root.join("app/assets/images/theme-photos-SYXxlEP5KAA-unsplash.jpg").open
@@ -96,11 +97,11 @@ beautician3.portfolio_photos.attach(io: file3, filename: 'beauty3.png', content_
 beautician4.portfolio_photos.attach(io: file4, filename: 'beauty4.png', content_type: 'image/jpg')
 beautician5.portfolio_photos.attach(io: file5, filename: 'beauty5.png', content_type: 'image/jpg')
 beautician6.portfolio_photos.attach(io: file6, filename: 'beauty6.png', content_type: 'image/jpg')
-beautician7.portfolio_photos.attach(io: file13, filename: 'beauty7.png', content_type: 'image/jpg')
-beautician8.portfolio_photos.attach(io: file14, filename: 'beauty8.png', content_type: 'image/jpg')
-beautician9.portfolio_photos.attach(io: file15, filename: 'beauty9.png', content_type: 'image/jpg')
-beautician10.portfolio_photos.attach(io: file16, filename: 'beauty10.png', content_type: 'image/jpg')
-beautician11.portfolio_photos.attach(io: file17, filename: 'beauty11.png', content_type: 'image/jpg')
+# beautician7.portfolio_photos.attach(io: file13, filename: 'beauty7.png', content_type: 'image/jpg')
+# beautician8.portfolio_photos.attach(io: file14, filename: 'beauty8.png', content_type: 'image/jpg')
+# beautician9.portfolio_photos.attach(io: file15, filename: 'beauty9.png', content_type: 'image/jpg')
+# beautician10.portfolio_photos.attach(io: file16, filename: 'beauty10.png', content_type: 'image/jpg')
+# beautician11.portfolio_photos.attach(io: file17, filename: 'beauty11.png', content_type: 'image/jpg')
 beautician.portfolio_photos.attach(io: file18, filename: 'beauty12.png', content_type: 'image/jpg')
 beautician2.portfolio_photos.attach(io: file19, filename: 'beauty13.png', content_type: 'image/jpg')
 beautician3.portfolio_photos.attach(io: file20, filename: 'beauty14.png', content_type: 'image/jpg')
@@ -121,10 +122,10 @@ beautician6.portfolio_photos.attach(io: file34, filename: 'beauty28.png', conten
 
 
 
-Treatment.create(name: "Ladies' Haircuts", cost: 30, description: "Trendy Haircuts for Women", category: "Hair", beautician: beautician)
-Treatment.create(name: "Facial Threading", cost: 10, description: "Threading allows for a more defined and precise shape and can create better definition for eyebrows", category: "Hair removal", beautician: beautician)
-Treatment.create(name: "Face Massage", cost: 35, description: "Face massage may be used to relieve tension and possibly control age-related phenomena, such as wrinkling.", category: "Massage", beautician: beautician)
-Treatment.create(name: "Manicure", cost: 20, description: "A manicure is a beauty treatment which uses special tools, creams, waxes and / or massage techniques to leave your nails and hands healthy", category: "Nails", beautician: beautician)
-Treatment.create(name: "Eyelash Extensions", cost: 40, description: "Eyelash Extensions is a method used by eyelash technicians to enhance the length, thickness, and fullness of natural eyelashes", category: "Face", beautician: beautician)
+Treatment.create(name: "Ladies' Haircuts", cost: 30, description: "Trendy Haircuts for Women", category: "Hair")
+Treatment.create(name: "Facial Threading", cost: 10, description: "Threading allows for a more defined and precise shape and can create better definition for eyebrows", category: "Hair removal")
+Treatment.create(name: "Face Massage", cost: 35, description: "Face massage may be used to relieve tension and possibly control age-related phenomena, such as wrinkling.", category: "Massage")
+Treatment.create(name: "Manicure", cost: 20, description: "A manicure is a beauty treatment which uses special tools, creams, waxes and / or massage techniques to leave your nails and hands healthy", category: "Nails")
+Treatment.create(name: "Eyelash Extensions", cost: 40, description: "Eyelash Extensions is a method used by eyelash technicians to enhance the length, thickness, and fullness of natural eyelashes", category: "Face")
 
-BeauticianTreatment.create(beautician: ,treatment: )
+# BeauticianTreatment.create(beautician: ,treatment: )
