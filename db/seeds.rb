@@ -7,6 +7,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 Review.destroy_all
 Order.destroy_all
+BeauticianTreatment.destroy_all
 Booking.destroy_all
 Treatment.destroy_all
 Beautician.destroy_all
@@ -121,35 +122,35 @@ beautician4.portfolio_photos.attach(io: file32, filename: 'beauty26.png', conten
 beautician5.portfolio_photos.attach(io: file33, filename: 'beauty27.png', content_type: 'image/jpg')
 beautician6.portfolio_photos.attach(io: file34, filename: 'beauty28.png', content_type: 'image/jpg')
 
-file35 = Rails.root.join("app/assets/images/client-in-a-beauty-salon-3997379.jpg").open
-file36 = Rails.root.join("app/assets/images/client-in-beauty-salon-3736287.jpg").open
-file37 = Rails.root.join("app/assets/images/crop-unrecognizable-beautician-applying-clay-mask-to-clients-3985349.jpg").open
-file38 = Rails.root.join("app/assets/images/person-cutting-hair-2799609.jpg").open
-file39 = Rails.root.join("app/assets/images/person-holding-artificial-nail-samples-3997377.jpg").open
-file40 = Rails.root.join("app/assets/images/person-in-black-gloves-massaging-fingers-3997383.jpg").open
-file41 = Rails.root.join("app/assets/images/person-in-black-leather-jacket-holding-red-textile-3997378.jpg").open
-file42 = Rails.root.join("app/assets/images/person-using-hair-razor-on-man-s-hair-3356174.jpg").open
-file43 = Rails.root.join("app/assets/images/person-wearing-black-gloves-3738377.jpg").open
-file44 = Rails.root.join("app/assets/images/person-wearing-black-gloves-making-nails-3997390.jpg").open
-file45 = Rails.root.join("app/assets/images/person-wearing-black-gloves-massaging-a-person-s-hand-3738375.jpg").open
-file46 = Rails.root.join("app/assets/images/person-with-black-and-white-manicure-3738369.jpg").open
-file47 = Rails.root.join("app/assets/images/photo-of-person-applying-cream-to-woman-s-hands-3738365.jpg").open
-file48 = Rails.root.join("app/assets/images/photo-of-person-s-hairstyle-3065170.jpg").open
-file49 = Rails.root.join("app/assets/images/photo-of-person-s-hairstyle-3065209.jpg").open
-file50 = Rails.root.join("app/assets/images/photo-of-person-s-hand-soak-in-water-3738378.jpg").open
-file51 = Rails.root.join("app/assets/images/photo-of-woman-having-facial-care-4207234.jpg").open
-file52 = Rails.root.join("app/assets/images/photo-of-woman-s-hairstyle-3065171.jpg").open
-file53 = Rails.root.join("app/assets/images/selective-focus-photography-of-woman-manicuring-person-3422099.jpg").open
-file54 = Rails.root.join("app/assets/images/woman-getting-a-facial-treatment-3985329.jpg").open
-file55 = Rails.root.join("app/assets/images/woman-getting-her-hair-shampoo-3993444.jpg").open
-file56 = Rails.root.join("app/assets/images/woman-having-facial-care-3738345.jpg").open
-file57 = Rails.root.join("app/assets/images/woman-having-facial-care-3738349.jpg").open
-file58 = Rails.root.join("app/assets/images/woman-having-facial-care-3738355.jpg").open
-file59 = Rails.root.join("app/assets/images/woman-in-black-long-sleeve-shirt-dong-manicure-3997350.jpg").open
-file60 = Rails.root.join("app/assets/images/woman-in-gray-crew-neck-t-shirt-holding-white-plastic-bottle-3997348.jpg").open
-file61 = Rails.root.join("app/assets/images/woman-in-white-tank-top-3985298.jpg").open
-file62 = Rails.root.join("app/assets/images/woman-in-white-tank-top-3985319.jpg").open
-file63 = Rails.root.join("app/assets/images/woman-lying-on-blue-textile-3997981.jpg").open
+file35 = Rails.root.join("app/assets/images/portfolio/client-in-a-beauty-salon-3997379.jpg").open
+file36 = Rails.root.join("app/assets/images/portfolio/client-in-beauty-salon-3736287.jpg").open
+file37 = Rails.root.join("app/assets/images/portfolio/crop-unrecognizable-beautician-applying-clay-mask-to-clients-3985349.jpg").open
+file38 = Rails.root.join("app/assets/images/portfolio/person-cutting-hair-2799609.jpg").open
+file39 = Rails.root.join("app/assets/images/portfolio/person-holding-artificial-nail-samples-3997377.jpg").open
+file40 = Rails.root.join("app/assets/images/portfolio/person-in-black-gloves-massaging-fingers-3997383.jpg").open
+file41 = Rails.root.join("app/assets/images/portfolio/person-in-black-leather-jacket-holding-red-textile-3997378.jpg").open
+file42 = Rails.root.join("app/assets/images/portfolio/person-using-hair-razor-on-man-s-hair-3356174.jpg").open
+file43 = Rails.root.join("app/assets/images/portfolio/person-wearing-black-gloves-3738377.jpg").open
+file44 = Rails.root.join("app/assets/images/portfolio/person-wearing-black-gloves-making-nails-3997390.jpg").open
+file45 = Rails.root.join("app/assets/images/portfolio/person-wearing-black-gloves-massaging-a-person-s-hand-3738375.jpg").open
+file46 = Rails.root.join("app/assets/images/portfolio/person-with-black-and-white-manicure-3738369.jpg").open
+file47 = Rails.root.join("app/assets/images/portfolio/photo-of-person-applying-cream-to-woman-s-hands-3738365.jpg").open
+file48 = Rails.root.join("app/assets/images/portfolio/photo-of-person-s-hairstyle-3065170.jpg").open
+file49 = Rails.root.join("app/assets/images/portfolio/photo-of-person-s-hairstyle-3065209.jpg").open
+file50 = Rails.root.join("app/assets/images/portfolio/photo-of-person-s-hand-soak-in-water-3738378.jpg").open
+file51 = Rails.root.join("app/assets/images/portfolio/photo-of-woman-having-facial-care-4207234.jpg").open
+file52 = Rails.root.join("app/assets/images/portfolio/photo-of-woman-s-hairstyle-3065171.jpg").open
+file53 = Rails.root.join("app/assets/images/portfolio/selective-focus-photography-of-woman-manicuring-person-3422099.jpg").open
+file54 = Rails.root.join("app/assets/images/portfolio/woman-getting-a-facial-treatment-3985329.jpg").open
+file55 = Rails.root.join("app/assets/images/portfolio/woman-getting-her-hair-shampoo-3993444.jpg").open
+file56 = Rails.root.join("app/assets/images/portfolio/woman-having-facial-care-3738345.jpg").open
+file57 = Rails.root.join("app/assets/images/portfolio/woman-having-facial-care-3738349.jpg").open
+file58 = Rails.root.join("app/assets/images/portfolio/woman-having-facial-care-3738355.jpg").open
+file59 = Rails.root.join("app/assets/images/portfolio/woman-in-black-long-sleeve-shirt-dong-manicure-3997350.jpg").open
+file60 = Rails.root.join("app/assets/images/portfolio/woman-in-gray-crew-neck-t-shirt-holding-white-plastic-bottle-3997348.jpg").open
+file61 = Rails.root.join("app/assets/images/portfolio/woman-in-white-tank-top-3985298.jpg").open
+file62 = Rails.root.join("app/assets/images/portfolio/woman-in-white-tank-top-3985319.jpg").open
+file63 = Rails.root.join("app/assets/images/portfolio/woman-lying-on-blue-textile-3997981.jpg").open
 
 beautician7.portfolio_photos.attach(io: file35, filename: 'beauty29.png', content_type: 'image/jpg')
 beautician8.portfolio_photos.attach(io: file36, filename: 'beauty30.png', content_type: 'image/jpg')
@@ -189,4 +190,7 @@ eyex = Treatment.create(name: "Eyelash Extensions", cost: 40, description: "Eyel
 mcut = Treatment.create(name: "Men's Haircut", cost: 25, description: "Fashionable Haircuts for Men", category: "Hair")
 wax = Treatment.create(name: "Waxing", cost: 35, description: "Get rid of any unwanted hair leaving only the smoothest skin", category: "Hair removal")
 
-BeauticianTreatment.create(beautician: ,treatment: )
+BeauticianTreatment.create(beautician: beautician, treatment: lcut)
+BeauticianTreatment.create(beautician: beautician, treatment: fath)
+BeauticianTreatment.create(beautician: beautician, treatment: fama)
+BeauticianTreatment.create(beautician: beautician, treatment: mani)
