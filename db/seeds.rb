@@ -13,6 +13,7 @@ Treatment.destroy_all
 Beautician.destroy_all
 User.destroy_all
 
+puts "deleted db"
 
 require "open-uri"
 
@@ -28,17 +29,19 @@ user9 = User.create(email: "user9@gmail.com", password: "123456")
 user10 = User.create(email: "user10@gmail.com", password: "123456")
 user11 = User.create(email: "user11@gmail.com", password: "123456")
 
-beautician = Beautician.create(description: "Quality haircuts from yours truely!", location: "Shoreditch", name: "Anna Haircuts", user: user)
-beautician2 = Beautician.create(description: "Manicures from the one and only MIMI.", location: "Shoreditch", name: "Mimi Manicures", user: user2)
-beautician3 = Beautician.create(description: "Hair done the right way.", location: "Hackney", name: "Zara's extensions", user: user3)
-beautician4 = Beautician.create(description: "Best value work on your nails  in london.", location: "Stratford", name: "Sandy Nails", user: user4)
-beautician5 = Beautician.create(description: "Hair, nails, eyes, everything available", location: "Camden", name: "Lulu Services", user: user5)
-beautician6 = Beautician.create(description: "Prettiest lashes in town.", location: "Croydon", name: "Polly's Eyes", user: user6)
-beautician7 = Beautician.create(description: "Specialist for your eyes.", location: "Fulham", name: "Eyes by Linda", user: user7)
-beautician8 = Beautician.create(description: "Coming to you for the best service.", location: "Harrow", name: "Garland's Anywhere", user: user8)
-beautician9 = Beautician.create(description: "Treatments right in the city", location: "Liverpool Street", name: "Bella's City Treatments", user: user9)
-beautician10 = Beautician.create(description: "Nail treatments anytime, anywhere.", location: "Brixton", name: "Rachel's Nails", user: user10)
-beautician11 = Beautician.create(description: "All services available on the go", location: "Shoreditch", name: "Susie's Stylings", user: user11)
+beautician = Beautician.create(description: "Quality haircuts from yours truely!", location: "Shoreditch, London", name: "Anna Haircuts", user: user)
+beautician2 = Beautician.create(description: "Manicures from the one and only MIMI.", location: "Shoreditch, London", name: "Mimi Manicures", user: user2)
+beautician3 = Beautician.create(description: "Hair done the right way.", location: "Hackney, London", name: "Zara's extensions", user: user3)
+beautician4 = Beautician.create(description: "Best value work on your nails  in london.", location: "Stratford, London", name: "Sandy Nails", user: user4)
+beautician5 = Beautician.create(description: "Hair, nails, eyes, everything available", location: "Camden, London", name: "Lulu Services", user: user5)
+beautician6 = Beautician.create(description: "Prettiest lashes in town.", location: "Croydon, London", name: "Polly's Eyes", user: user6)
+beautician7 = Beautician.create(description: "Specialist for your eyes.", location: "Fulham, London", name: "Eyes by Linda", user: user7)
+beautician8 = Beautician.create(description: "Coming to you for the best service.", location: "Greenwich, London", name: "Garland's Anywhere", user: user8)
+beautician9 = Beautician.create(description: "Treatments right in the city", location: "Liverpool Street, London", name: "Bella's City Treatments", user: user9)
+beautician10 = Beautician.create(description: "Nail treatments anytime, anywhere.", location: "Brixton, London", name: "Rachel's Nails", user: user10)
+beautician11 = Beautician.create(description: "All services available on the go", location: "Shoreditch, London", name: "Susie's Stylings", user: user11)
+
+puts "created user & beautician"
 
 file = Rails.root.join("app/assets/images/image1.jpg").open
 file2 = Rails.root.join("app/assets/images/image2.jpg").open
@@ -75,6 +78,9 @@ file32 = Rails.root.join("app/assets/images/manicure-1365552_1920.jpg").open
 file33 = Rails.root.join("app/assets/images/people-2583493_1920.jpg").open
 file34 = Rails.root.join("app/assets/images/people-2587157_1920.jpg").open
 
+puts "opened photos"
+
+
 beautician.banner_photo.attach(io: file7, filename: 'beauty1.png', content_type: 'image/jpg')
 beautician2.banner_photo.attach(io: file8, filename: 'beauty2.png', content_type: 'image/jpg')
 beautician3.banner_photo.attach(io: file9, filename: 'beauty3.png', content_type: 'image/jpg')
@@ -86,6 +92,8 @@ beautician8.banner_photo.attach(io: file14, filename: 'beauty8.png', content_typ
 beautician9.banner_photo.attach(io: file15, filename: 'beauty9.png', content_type: 'image/jpg')
 beautician10.banner_photo.attach(io: file16, filename: 'beauty10.png', content_type: 'image/jpg')
 beautician11.banner_photo.attach(io: file17, filename: 'beauty11.png', content_type: 'image/jpg')
+
+puts "photos for banners attached"
 
 file13 = Rails.root.join("app/assets/images/allie-89k7poPsypk-unsplash.jpg").open
 file14 = Rails.root.join("app/assets/images/antonika-chanel-jmRbgqXLCI0-unsplash.jpg").open
@@ -190,8 +198,91 @@ eyex = Treatment.create(name: "Eyelash Extensions", cost: 40, description: "Eyel
 mcut = Treatment.create(name: "Men's Haircut", cost: 25, description: "Fashionable Haircuts for Men", category: "Hair")
 wax = Treatment.create(name: "Waxing", cost: 35, description: "Get rid of any unwanted hair leaving only the smoothest skin", category: "Hair removal")
 
-BeauticianTreatment.create(beautician: beautician, treatment: lcut)
-BeauticianTreatment.create(beautician: beautician, treatment: fath)
-BeauticianTreatment.create(beautician: beautician, treatment: fama)
-BeauticianTreatment.create(beautician: beautician, treatment: mani)
+BeauticianTreatment.create(beautician: beautician, treatment: lcut, name: lcut.name, description: lcut.description, cost: lcut.cost)
+BeauticianTreatment.create(beautician: beautician, treatment: fath, name: fath.name, description: fath.description, cost: fath.cost)
+BeauticianTreatment.create(beautician: beautician, treatment: fama, name: fama.name, description: fama.description, cost: fama.cost)
+BeauticianTreatment.create(beautician: beautician, treatment: mani, name: mani.name, description: mani.description, cost: mani.cost)
+BeauticianTreatment.create(beautician: beautician, treatment: wax, name: wax.name, description: wax.description, cost: wax.cost)
+BeauticianTreatment.create(beautician: beautician, treatment: eyex, name: eyex.name, description: eyex.description, cost: eyex.cost)
+BeauticianTreatment.create(beautician: beautician, treatment: mcut, name: mcut.name, description: mcut.description, cost: mcut.cost)
+
+BeauticianTreatment.create(beautician: beautician2, treatment: lcut, name: lcut.name, description: lcut.description, cost: lcut.cost)
+BeauticianTreatment.create(beautician: beautician2, treatment: fath, name: fath.name, description: fath.description, cost: fath.cost)
+BeauticianTreatment.create(beautician: beautician2, treatment: fama, name: fama.name, description: fama.description, cost: fama.cost)
+BeauticianTreatment.create(beautician: beautician2, treatment: mani, name: mani.name, description: mani.description, cost: mani.cost)
+BeauticianTreatment.create(beautician: beautician2, treatment: wax, name: wax.name, description: wax.description, cost: wax.cost)
+BeauticianTreatment.create(beautician: beautician2, treatment: eyex, name: eyex.name, description: eyex.description, cost: eyex.cost)
+BeauticianTreatment.create(beautician: beautician2, treatment: mcut, name: mcut.name, description: mcut.description, cost: mcut.cost)
+
+BeauticianTreatment.create(beautician: beautician3, treatment: lcut, name: lcut.name, description: lcut.description, cost: lcut.cost)
+BeauticianTreatment.create(beautician: beautician3, treatment: fath, name: fath.name, description: fath.description, cost: fath.cost)
+BeauticianTreatment.create(beautician: beautician3, treatment: fama, name: fama.name, description: fama.description, cost: fama.cost)
+BeauticianTreatment.create(beautician: beautician3, treatment: mani, name: mani.name, description: mani.description, cost: mani.cost)
+BeauticianTreatment.create(beautician: beautician3, treatment: wax, name: wax.name, description: wax.description, cost: wax.cost)
+BeauticianTreatment.create(beautician: beautician3, treatment: eyex, name: eyex.name, description: eyex.description, cost: eyex.cost)
+BeauticianTreatment.create(beautician: beautician3, treatment: mcut, name: mcut.name, description: mcut.description, cost: mcut.cost)
+
+BeauticianTreatment.create(beautician: beautician4, treatment: lcut, name: lcut.name, description: lcut.description, cost: lcut.cost)
+BeauticianTreatment.create(beautician: beautician4, treatment: fath, name: fath.name, description: fath.description, cost: fath.cost)
+BeauticianTreatment.create(beautician: beautician4, treatment: fama, name: fama.name, description: fama.description, cost: fama.cost)
+BeauticianTreatment.create(beautician: beautician4, treatment: mani, name: mani.name, description: mani.description, cost: mani.cost)
+BeauticianTreatment.create(beautician: beautician4, treatment: wax, name: wax.name, description: wax.description, cost: wax.cost)
+BeauticianTreatment.create(beautician: beautician4, treatment: eyex, name: eyex.name, description: eyex.description, cost: eyex.cost)
+BeauticianTreatment.create(beautician: beautician4, treatment: mcut, name: mcut.name, description: mcut.description, cost: mcut.cost)
+
+BeauticianTreatment.create(beautician: beautician5, treatment: lcut, name: lcut.name, description: lcut.description, cost: lcut.cost)
+BeauticianTreatment.create(beautician: beautician5, treatment: fath, name: fath.name, description: fath.description, cost: fath.cost)
+BeauticianTreatment.create(beautician: beautician5, treatment: fama, name: fama.name, description: fama.description, cost: fama.cost)
+BeauticianTreatment.create(beautician: beautician5, treatment: mani, name: mani.name, description: mani.description, cost: mani.cost)
+BeauticianTreatment.create(beautician: beautician5, treatment: wax, name: wax.name, description: wax.description, cost: wax.cost)
+BeauticianTreatment.create(beautician: beautician5, treatment: eyex, name: eyex.name, description: eyex.description, cost: eyex.cost)
+BeauticianTreatment.create(beautician: beautician5, treatment: mcut, name: mcut.name, description: mcut.description, cost: mcut.cost)
+
+BeauticianTreatment.create(beautician: beautician6, treatment: lcut, name: lcut.name, description: lcut.description, cost: lcut.cost)
+BeauticianTreatment.create(beautician: beautician6, treatment: fath, name: fath.name, description: fath.description, cost: fath.cost)
+BeauticianTreatment.create(beautician: beautician6, treatment: fama, name: fama.name, description: fama.description, cost: fama.cost)
+BeauticianTreatment.create(beautician: beautician6, treatment: mani, name: mani.name, description: mani.description, cost: mani.cost)
+BeauticianTreatment.create(beautician: beautician6, treatment: wax, name: wax.name, description: wax.description, cost: wax.cost)
+BeauticianTreatment.create(beautician: beautician6, treatment: eyex, name: eyex.name, description: eyex.description, cost: eyex.cost)
+BeauticianTreatment.create(beautician: beautician6, treatment: mcut, name: mcut.name, description: mcut.description, cost: mcut.cost)
+
+BeauticianTreatment.create(beautician: beautician7, treatment: lcut, name: lcut.name, description: lcut.description, cost: lcut.cost)
+BeauticianTreatment.create(beautician: beautician7, treatment: fath, name: fath.name, description: fath.description, cost: fath.cost)
+BeauticianTreatment.create(beautician: beautician7, treatment: fama, name: fama.name, description: fama.description, cost: fama.cost)
+BeauticianTreatment.create(beautician: beautician7, treatment: mani, name: mani.name, description: mani.description, cost: mani.cost)
+BeauticianTreatment.create(beautician: beautician7, treatment: wax, name: wax.name, description: wax.description, cost: wax.cost)
+BeauticianTreatment.create(beautician: beautician7, treatment: eyex, name: eyex.name, description: eyex.description, cost: eyex.cost)
+BeauticianTreatment.create(beautician: beautician7, treatment: mcut, name: mcut.name, description: mcut.description, cost: mcut.cost)
+
+BeauticianTreatment.create(beautician: beautician8, treatment: lcut, name: lcut.name, description: lcut.description, cost: lcut.cost)
+BeauticianTreatment.create(beautician: beautician8, treatment: fath, name: fath.name, description: fath.description, cost: fath.cost)
+BeauticianTreatment.create(beautician: beautician8, treatment: fama, name: fama.name, description: fama.description, cost: fama.cost)
+BeauticianTreatment.create(beautician: beautician8, treatment: mani, name: mani.name, description: mani.description, cost: mani.cost)
+BeauticianTreatment.create(beautician: beautician8, treatment: wax, name: wax.name, description: wax.description, cost: wax.cost)
+BeauticianTreatment.create(beautician: beautician8, treatment: eyex, name: eyex.name, description: eyex.description, cost: eyex.cost)
+BeauticianTreatment.create(beautician: beautician8, treatment: mcut, name: mcut.name, description: mcut.description, cost: mcut.cost)
+
+BeauticianTreatment.create(beautician: beautician9, treatment: lcut, name: lcut.name, description: lcut.description, cost: lcut.cost)
+BeauticianTreatment.create(beautician: beautician9, treatment: fath, name: fath.name, description: fath.description, cost: fath.cost)
+BeauticianTreatment.create(beautician: beautician9, treatment: fama, name: fama.name, description: fama.description, cost: fama.cost)
+BeauticianTreatment.create(beautician: beautician9, treatment: mani, name: mani.name, description: mani.description, cost: mani.cost)
+BeauticianTreatment.create(beautician: beautician9, treatment: wax, name: wax.name, description: wax.description, cost: wax.cost)
+BeauticianTreatment.create(beautician: beautician9, treatment: eyex, name: eyex.name, description: eyex.description, cost: eyex.cost)
+BeauticianTreatment.create(beautician: beautician9, treatment: mcut, name: mcut.name, description: mcut.description, cost: mcut.cost)
+
+BeauticianTreatment.create(beautician: beautician10, treatment: lcut, name: lcut.name, description: lcut.description, cost: lcut.cost)
+BeauticianTreatment.create(beautician: beautician10, treatment: fath, name: fath.name, description: fath.description, cost: fath.cost)
+BeauticianTreatment.create(beautician: beautician10, treatment: fama, name: fama.name, description: fama.description, cost: fama.cost)
+BeauticianTreatment.create(beautician: beautician10, treatment: mani, name: mani.name, description: mani.description, cost: mani.cost)
+BeauticianTreatment.create(beautician: beautician10, treatment: wax, name: wax.name, description: wax.description, cost: wax.cost)
+BeauticianTreatment.create(beautician: beautician10, treatment: eyex, name: eyex.name, description: eyex.description, cost: eyex.cost)
+BeauticianTreatment.create(beautician: beautician10, treatment: mcut, name: mcut.name, description: mcut.description, cost: mcut.cost)
+
+BeauticianTreatment.create(beautician: beautician11, treatment: lcut, name: lcut.name, description: lcut.description, cost: lcut.cost)
+BeauticianTreatment.create(beautician: beautician11, treatment: fath, name: fath.name, description: fath.description, cost: fath.cost)
+BeauticianTreatment.create(beautician: beautician11, treatment: fama, name: fama.name, description: fama.description, cost: fama.cost)
+BeauticianTreatment.create(beautician: beautician11, treatment: mani, name: mani.name, description: mani.description, cost: mani.cost)
+BeauticianTreatment.create(beautician: beautician11, treatment: wax, name: wax.name, description: wax.description, cost: wax.cost)
+BeauticianTreatment.create(beautician: beautician11, treatment: eyex, name: eyex.name, description: eyex.description, cost: eyex.cost)
+BeauticianTreatment.create(beautician: beautician11, treatment: mcut, name: mcut.name, description: mcut.description, cost: mcut.cost)
 
