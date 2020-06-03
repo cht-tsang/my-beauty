@@ -7,11 +7,11 @@ class ReviewsController < ApplicationController
   def create
     @review = Review.new(review_params)
     @booking = Booking.find(params[:booking_id])
-    @review.beautician = @booking.treatment.beautician
+    @review.beautician = @booking.beautician_treatment.beautician
     @review.booking = @booking
     @review.user_id = current_user.id
     if @review.save
-      redirect_to booking_path(@booking)
+      redirect_to beautician_path(@review.beautician)
     else
       flash[:alert] = "Something went wrong. Review did not save."
       render :new
