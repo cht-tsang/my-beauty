@@ -5,7 +5,7 @@ class OrdersController < ApplicationController
 
   def create
     booking = Booking.find(params[:booking_id])
-    order  = Order.create!(booking: booking, booking_sku: "1", amount: booking.treatment.cost, state: 'pending', user: current_user)
+    order  = Order.create!(booking: booking, booking_sku: "1", amount: booking.beautician_treatment.cost, state: 'pending', user: current_user)
     
 
     session = Stripe::Checkout::Session.create(

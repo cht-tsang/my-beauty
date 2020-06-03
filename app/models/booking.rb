@@ -1,6 +1,6 @@
 class Booking < ApplicationRecord
   belongs_to :user
-  belongs_to :treatment
+  belongs_to :beautician_treatment
   has_one :review
 
   monetize :price_cents

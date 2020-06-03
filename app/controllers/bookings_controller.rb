@@ -8,14 +8,15 @@ class BookingsController < ApplicationController
   end
 
   def new
-    @treatment = Treatment.find(params[:treatment_id])
+    @treatment = BeauticianTreatment.find(params[:beautician_treatment_id])
+  
     @booking = Booking.new
   end
 
   def create
-    @treatment = Treatment.find(params[:treatment_id])
+    @treatment = BeauticianTreatment.find(params[:beautician_treatment_id])
     @booking = Booking.new(booking_params)
-    @booking.treatment = @treatment
+    @booking.beautician_treatment = @treatment
     @booking.user = current_user
     # @booking.price = @booking.treatment.price
     if @booking.save

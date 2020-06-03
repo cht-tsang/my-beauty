@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_06_02_134338) do
+ActiveRecord::Schema.define(version: 2020_06_03_091956) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -75,13 +75,13 @@ ActiveRecord::Schema.define(version: 2020_06_02_134338) do
     t.datetime "date"
     t.time "time"
     t.bigint "user_id", null: false
-    t.bigint "treatment_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.string "location"
     t.integer "price_cents", default: 0, null: false
     t.string "sku"
-    t.index ["treatment_id"], name: "index_bookings_on_treatment_id"
+    t.bigint "beautician_treatment_id", null: false
+    t.index ["beautician_treatment_id"], name: "index_bookings_on_beautician_treatment_id"
     t.index ["user_id"], name: "index_bookings_on_user_id"
   end
 
@@ -141,7 +141,7 @@ ActiveRecord::Schema.define(version: 2020_06_02_134338) do
   add_foreign_key "beautician_treatments", "beauticians"
   add_foreign_key "beautician_treatments", "treatments"
   add_foreign_key "beauticians", "users"
-  add_foreign_key "bookings", "treatments"
+  add_foreign_key "bookings", "beautician_treatments"
   add_foreign_key "bookings", "users"
   add_foreign_key "orders", "bookings"
   add_foreign_key "orders", "users"
