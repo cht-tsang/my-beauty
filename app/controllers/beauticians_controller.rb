@@ -1,5 +1,5 @@
 class BeauticiansController < ApplicationController
-  skip_before_action :authenticate_user!, only: :index
+  skip_before_action :authenticate_user!, only: [:index, :search_results]
 
   def index
 
