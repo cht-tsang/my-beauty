@@ -18,7 +18,7 @@ class BeauticiansController < ApplicationController
           # @beauticians = @beauticians.select{|beautician| beautician.treatments.include?(Treatment.where(category: params[:multiquery][:treatment]))}
         end
         if params[:multiquery][:postcode]
-          @beauticians = Beautician.near(params[:multiquery][:postcode], 15)
+          @beauticians = Beautician.near(params[:multiquery][:postcode], 5)
         end
         
           # @beauticians = @beauticians
