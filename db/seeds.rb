@@ -18,17 +18,20 @@ puts "deleted db"
 
 require "open-uri"
 
-user = User.create(email: "user@gmail.com", password: "123456")
-user2 = User.create(email: "user2@gmail.com", password: "123456")
-user3 = User.create(email: "user3@gmail.com", password: "123456")
-user4 = User.create(email: "user4@gmail.com", password: "123456")
-user5 = User.create(email: "user5@gmail.com", password: "123456")
-user6 = User.create(email: "user6@gmail.com", password: "123456")
-user7 = User.create(email: "user7@gmail.com", password: "123456")
-user8 = User.create(email: "user8@gmail.com", password: "123456")
-user9 = User.create(email: "user9@gmail.com", password: "123456")
-user10 = User.create(email: "user10@gmail.com", password: "123456")
-user11 = User.create(email: "user11@gmail.com", password: "123456")
+user = User.create(email: "annashair@gmail.com", password: "123456")
+user2 = User.create(email: "mimi@gmail.com", password: "123456")
+user3 = User.create(email: "zara@gmail.com", password: "123456")
+user4 = User.create(email: "sandynail@gmail.com", password: "123456")
+user5 = User.create(email: "lulu@gmail.com", password: "123456")
+user6 = User.create(email: "polly@gmail.com", password: "123456")
+user7 = User.create(email: "linda@gmail.com", password: "123456")
+user8 = User.create(email: "garland@gmail.com", password: "123456")
+user9 = User.create(email: "bella@gmail.com", password: "123456")
+user10 = User.create(email: "rachel@gmail.com", password: "123456")
+user11 = User.create(email: "susie@gmail.com", password: "123456")
+
+# customer
+brad = User.create(email: "bradleyscott@yahoo.com", password: "123456")
 
 beautician = Beautician.create(description: "Quality haircuts from yours truely!", location: "Shoreditch, London", name: "Anna Haircuts", user: user)
 beautician2 = Beautician.create(description: "Manicures from the one and only MIMI.", location: "Shoreditch, London", name: "Mimi Manicures", user: user2)
