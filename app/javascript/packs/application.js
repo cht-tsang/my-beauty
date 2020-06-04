@@ -26,7 +26,7 @@ require("slick-carousel")
 import "bootstrap";
 import { Application } from "stimulus"
 import { definitionsFromContext } from "stimulus/webpack-helpers"
-import flatpickr from "flatpickr";
+
 // import Rails from "rails-ujs";
 
 
