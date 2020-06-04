@@ -27,7 +27,7 @@ class BookingsController < ApplicationController
   end
 
   def edit
-      @beautician_treatment = BeauticianTreatment.find(params[:id])
+      @booking = Booking.find(params[:id])
   end
 
   def update
