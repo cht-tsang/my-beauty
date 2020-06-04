@@ -47,12 +47,12 @@ beautician11 = Beautician.create(description: "All services available on the go"
 
 puts "created user & beautician"
 
-file = Rails.root.join("app/assets/images/image1.jpg").open
-file2 = Rails.root.join("app/assets/images/image2.jpg").open
-file3 = Rails.root.join("app/assets/images/image3.jpg").open
-file4 = Rails.root.join("app/assets/images/image4.jpg").open
-file5 = Rails.root.join("app/assets/images/image5.jpg").open
-file6 = Rails.root.join("app/assets/images/image6.jpg").open
+file = Rails.root.join("app/assets/images/portfolio2/hair-scissors-and-tools.jpg").open
+file2 = Rails.root.join("app/assets/images/portfolio2/woman-getting-makeup-applied.jpg").open
+file3 = Rails.root.join("app/assets/images/portfolio2/painting-nails.jpg").open
+file4 = Rails.root.join("app/assets/images/portfolio2/makeup-395044_1920.jpg").open
+file5 = Rails.root.join("app/assets/images/portfolio2/haircut-4019676_1920.jpg").open
+file6 = Rails.root.join("app/assets/images/portfolio2/ease-3106604_1920.jpg").open
 file7 = Rails.root.join("app/assets/images/dave-francis-bVQSBKF9Ci4-unsplash.jpg").open
 file8 = Rails.root.join("app/assets/images/shari-sirotnak-oM5YoMhTf8E-unsplash.jpg").open
 file9 = Rails.root.join("app/assets/images/element5-digital-ooPx1bxmTc4-unsplash.jpg").open
