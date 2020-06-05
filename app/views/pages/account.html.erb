@@ -8,9 +8,9 @@
               <p><b>Beautician: </b><%= booking.beautician_treatment.beautician.name %></p> 
               <p><b>Date: </b><%= booking.date.strftime("%d / %m / %Y") %></p>
               <p><b>Treatment: </b><%= booking.beautician_treatment.name %></p>
-              <%= link_to "View Booking", booking_path(booking), class: 'btn btn-my-beauty' %>
-              <%= link_to "Edit Booking", edit_booking_path(booking), class: 'btn btn-my-beauty' %>
-              <%= link_to 'Leave a review', new_booking_review_path(booking), class: 'btn btn-my-beauty' %>
+              <%= link_to "View Booking", booking_path(booking), class: 'btn btn-my-beauty hvr-float-shadow' %>
+              <%= link_to "Edit Booking", edit_booking_path(booking), class: 'btn btn-my-beauty hvr-float-shadow' %>
+              <%= link_to 'Leave a review', new_booking_review_path(booking), class: 'btn btn-my-beauty hvr-float-shadow' %>
             </div>
           </div>
       </div>
