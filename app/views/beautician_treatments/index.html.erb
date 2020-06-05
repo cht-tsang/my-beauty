@@ -1,4 +1,9 @@
 <div class="container">
+  <% if current_user.beauticians.first.banner_photo.attached? %>
+    <div class="text-center"> 
+      <%= cl_image_tag current_user.beauticians.first.banner_photo.try(:key), height: 300, width: 900, crop: :fill %>
+    </div>  
+  <% end %>
   <div>
   <h3 class="text-center">Your Beautician Treatments</h3>
   </div>
@@ -9,7 +14,7 @@
     <% @beautician_treatments.each do |treatment| %>
     <div class="col-lg-4 col-md-6 col-sm-12 p-3">
       <div class="card treatment-service-card">
-        <div class="card-body">
+        <div class="card-body treatment_background">
           <h4 class="card-title"><%= treatment.name %></h4>
           <p class="card-text"><%= treatment.description %></p>
         </div>
