@@ -6,3 +6,7 @@ a:hover {
   text-decoration: none;
   color: #D5A682;
 }
+
+.min-height {
+ min-height: calc(100vh - 247px);
+}
