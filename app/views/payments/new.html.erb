@@ -4,7 +4,7 @@
     <div class="col">
       <h1>Checkout summary</h1>
       <p>Purchase of <strong><%= @order.booking.beautician_treatment.name %></strong> for <strong><%= humanized_money_with_symbol @order.amount %></strong></p>
-      <button id="pay" class="btn btn-my-beauty">Pay</button>
+      <button id="pay" class="btn btn-my-beauty hvr-float-shadow">Pay</button>
       
       <script src="https://js.stripe.com/v3/"></script>
       <script>
