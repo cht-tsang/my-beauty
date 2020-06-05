@@ -18,6 +18,7 @@ puts "deleted db"
 
 require "open-uri"
 
+# worker accounts
 user = User.create(email: "annashair@gmail.com", password: "123456")
 user2 = User.create(email: "mimi@gmail.com", password: "123456")
 user3 = User.create(email: "zara@gmail.com", password: "123456")
@@ -32,6 +33,12 @@ user11 = User.create(email: "susie@gmail.com", password: "123456")
 
 # customer
 brad = User.create(email: "bradleyscott@yahoo.com", password: "123456")
+kiera = User.create(email: "kiera90@gmail.com", password: "123456")
+hailey = User.create(email: "haileybieber@gmail.com", password: "123456")
+petre = User.create(email: "petra@gmail.com", password: "123456")
+gwenda = User.create(email: "gwenda@gmail.com", password: "123456")
+maryjane = User.create(email: "maryjane@gmail.com", password: "123456")
+
 
 beautician = Beautician.create(description: "Quality haircuts from yours truely!", location: "Shoreditch, London", name: "Anna Haircuts", user: user)
 beautician2 = Beautician.create(description: "Manicures from the one and only MIMI.", location: "Shoreditch, London", name: "Mimi Manicures", user: user2)
