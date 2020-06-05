@@ -19,7 +19,7 @@ puts "deleted db"
 require "open-uri"
 
 # worker accounts
-user = User.create(email: "annashair@gmail.com", password: "123456")
+user = User.create(email: "marco@gmail.com", password: "123456")
 user2 = User.create(email: "mimi@gmail.com", password: "123456")
 user3 = User.create(email: "zara@gmail.com", password: "123456")
 user4 = User.create(email: "sandynail@gmail.com", password: "123456")
@@ -40,7 +40,7 @@ gwenda = User.create(email: "gwenda@gmail.com", password: "123456")
 maryjane = User.create(email: "maryjane@gmail.com", password: "123456")
 
 
-beautician = Beautician.create(description: "Quality haircuts from yours truely!", location: "Shoreditch, London", name: "Anna Haircuts", user: user)
+beautician = Beautician.create(description: "Quality haircuts from yours truely!", location: "Shoreditch, London", name: "Marco's Beauties", user: user)
 beautician2 = Beautician.create(description: "Manicures from the one and only MIMI.", location: "Shoreditch, London", name: "Mimi Manicures", user: user2)
 beautician3 = Beautician.create(description: "Hair done the right way.", location: "Hackney, London", name: "Zara's extensions", user: user3)
 beautician4 = Beautician.create(description: "Best value work on your nails  in london.", location: "Stratford, London", name: "Sandy Nails", user: user4)
